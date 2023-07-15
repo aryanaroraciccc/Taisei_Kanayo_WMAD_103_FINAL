@@ -1,0 +1,135 @@
+@import "base-style";
+
+
+.container {
+    width: 100vw;
+    height: 100vh;
+
+    display: grid;
+    grid-template-areas: "navigation main";
+    grid-template-columns: 182px 1fr;
+}
+
+nav {
+    grid-area: navigation;
+    background: #000;
+    color: #fff;
+    font-family: $sans-text;
+    padding: 1rem;
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-rows: 80px 1fr 30px;
+
+    .nav {
+        &-group-logo {
+            width: 95%;
+            margin: 0 auto 2rem;
+            transform: translateX(10px);
+        }
+    
+        &-brands-container {
+            width: 80%;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        &-brand {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 1;
+
+            img {
+                width: 50px;
+                cursor: pointer;
+            }
+
+            &.active {
+                transform: translateX(40px);
+            }
+
+            .brand-name-container {
+                position: absolute;
+                left: 100%;
+                z-index: 1;
+                white-space: nowrap;
+                opacity: 0;
+
+                &.active {
+                    opacity: 1;
+                }
+                
+                &::before, &::after {
+                    content: "";
+                    position: absolute;
+                    bottom: 0;
+                    width: calc(100% + 50px);
+                    height: 1px;
+                    background: rgba(255,255,255,.75);
+                }
+
+                &::before {
+                    transform: translate(-90px, 5px);
+                }
+
+                &::after {
+                    right: 0;
+                    transform: translate(20px, 14px);
+                }
+
+                .brand-category {
+                    font-size: .7rem;
+                    margin: 0;
+                }
+
+                .brand-name {
+                    font-size: 1.2rem;
+                    margin: 0;
+                    margin-top: .5rem;
+                }
+
+                .text-icon {
+                    position: absolute;
+                    width: 10px;
+                    right: 0;
+                    transform: translate(20px, -6px);
+                }
+            }
+        }
+
+        &-lang {
+            ul {
+                list-style: none;
+                display: flex;
+                padding: .8rem;
+                padding-bottom: 0;
+                margin: 0;
+                border-top: 1px solid #888888;
+                justify-content: space-around;
+                align-items: center;
+
+                li {
+                    font-size: .7rem;
+                    padding: 1px 4px;
+                    &.active {
+                        border: 1px solid #fff;
+                    }
+                }
+            }
+        }
+    
+    }
+
+
+}
+
+main {
+    grid-area: main;
+    background: {
+        image: url(images/1.jpg);
+        size: cover;
+        position: center;
+    };
+}

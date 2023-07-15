@@ -1,0 +1,121 @@
+* {
+  box-sizing: border-box;
+  position: relative;
+}
+
+body {
+  margin: 0;
+}
+
+img {
+  width: 100%;
+  vertical-align: bottom;
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  grid-template-areas: "navigation main";
+  grid-template-columns: 182px 1fr;
+}
+
+nav {
+  grid-area: navigation;
+  background: #000;
+  color: #fff;
+  font-family: "Noto Sans JP", sans-serif;
+  padding: 1rem;
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-rows: 80px 1fr 30px;
+}
+nav .nav-group-logo {
+  width: 95%;
+  margin: 0 auto 2rem;
+  transform: translateX(10px);
+}
+nav .nav-brands-container {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+nav .nav-brand {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+}
+nav .nav-brand img {
+  width: 50px;
+  cursor: pointer;
+}
+nav .nav-brand.active {
+  transform: translateX(40px);
+}
+nav .nav-brand .brand-name-container {
+  position: absolute;
+  left: 100%;
+  z-index: 1;
+  white-space: nowrap;
+  opacity: 0;
+}
+nav .nav-brand .brand-name-container.active {
+  opacity: 1;
+}
+nav .nav-brand .brand-name-container::before, nav .nav-brand .brand-name-container::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  width: calc(100% + 50px);
+  height: 1px;
+  background: rgba(255, 255, 255, 0.75);
+}
+nav .nav-brand .brand-name-container::before {
+  transform: translate(-90px, 5px);
+}
+nav .nav-brand .brand-name-container::after {
+  right: 0;
+  transform: translate(20px, 14px);
+}
+nav .nav-brand .brand-name-container .brand-category {
+  font-size: 0.7rem;
+  margin: 0;
+}
+nav .nav-brand .brand-name-container .brand-name {
+  font-size: 1.2rem;
+  margin: 0;
+  margin-top: 0.5rem;
+}
+nav .nav-brand .brand-name-container .text-icon {
+  position: absolute;
+  width: 10px;
+  right: 0;
+  transform: translate(20px, -6px);
+}
+nav .nav-lang ul {
+  list-style: none;
+  display: flex;
+  padding: 0.8rem;
+  padding-bottom: 0;
+  margin: 0;
+  border-top: 1px solid #888888;
+  justify-content: space-around;
+  align-items: center;
+}
+nav .nav-lang ul li {
+  font-size: 0.7rem;
+  padding: 1px 4px;
+}
+nav .nav-lang ul li.active {
+  border: 1px solid #fff;
+}
+
+main {
+  grid-area: main;
+  background-image: url(images/1.jpg);
+  background-size: cover;
+  background-position: center;
+}/*# sourceMappingURL=home-style.css.map */

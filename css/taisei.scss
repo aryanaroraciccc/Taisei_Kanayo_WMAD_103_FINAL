@@ -1,0 +1,44 @@
+.contact-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.toggle-trigger {
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    border:solid;
+
+    .arrow {
+        position: relative;
+        display: inline-block;
+        transition: transform 1s ease-in-out;
+        margin-left: 5px;
+      }
+    .arrow.toggle-arrow-animation {
+        transform: rotate(-90deg);
+    }  
+    
+      
+}
+  
+
+.contact-detail {
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 1s ease, opacity 1s ease;
+  }
+  
+  .contact-detail.show {
+    opacity: 1;
+    max-height: 100%; 
+  }
+  
+  

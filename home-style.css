@@ -20,7 +20,7 @@ img {
   grid-template-columns: 182px 1fr;
 }
 
-nav {
+header {
   grid-area: navigation;
   background: #000;
   color: #fff;
@@ -30,42 +30,42 @@ nav {
   grid-template-rows: 1fr;
   grid-template-rows: 80px 1fr 30px;
 }
-nav .nav-group-logo {
+header .nav-group-logo {
   width: 95%;
   margin: 0 auto 2rem;
   transform: translateX(10px);
+  opacity: 1;
+  transition: all 5s;
 }
-nav .nav-brands-container {
+header .nav-brands-container {
   width: 80%;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
   gap: 2rem;
 }
-nav .nav-brand {
+header .nav-brand {
   display: flex;
   justify-content: center;
   align-items: center;
   z-index: 1;
+  transition: all 1s;
+  cursor: pointer;
 }
-nav .nav-brand img {
+header .nav-brand img {
   width: 50px;
   cursor: pointer;
 }
-nav .nav-brand.active {
-  transform: translateX(40px);
-}
-nav .nav-brand .brand-name-container {
+header .nav-brand .brand-name-container {
   position: absolute;
   left: 100%;
   z-index: 1;
   white-space: nowrap;
   opacity: 0;
+  pointer-events: none;
+  transition: all 1s;
 }
-nav .nav-brand .brand-name-container.active {
-  opacity: 1;
-}
-nav .nav-brand .brand-name-container::before, nav .nav-brand .brand-name-container::after {
+header .nav-brand .brand-name-container::before, header .nav-brand .brand-name-container::after {
   content: "";
   position: absolute;
   bottom: 0;
@@ -73,29 +73,44 @@ nav .nav-brand .brand-name-container::before, nav .nav-brand .brand-name-contain
   height: 1px;
   background: rgba(255, 255, 255, 0.75);
 }
-nav .nav-brand .brand-name-container::before {
-  transform: translate(-90px, 5px);
+header .nav-brand .brand-name-container::before {
+  transform: translate(-90px, 5px) scaleX(0);
+  transform-origin: left;
 }
-nav .nav-brand .brand-name-container::after {
+header .nav-brand .brand-name-container::after {
   right: 0;
   transform: translate(20px, 14px);
+  transform-origin: right;
 }
-nav .nav-brand .brand-name-container .brand-category {
+header .nav-brand .brand-name-container .brand-category {
   font-size: 0.7rem;
   margin: 0;
 }
-nav .nav-brand .brand-name-container .brand-name {
+header .nav-brand .brand-name-container .brand-name {
   font-size: 1.2rem;
   margin: 0;
   margin-top: 0.5rem;
 }
-nav .nav-brand .brand-name-container .text-icon {
+header .nav-brand .brand-name-container .text-icon {
   position: absolute;
   width: 10px;
   right: 0;
   transform: translate(20px, -6px);
 }
-nav .nav-lang ul {
+header .nav-brand.active {
+  transform: translateX(40px);
+}
+header .nav-brand.active .brand-name-container {
+  opacity: 1;
+  pointer-events: unset;
+}
+header .nav-brand.active .brand-name-container::before {
+  animation: beforeBorder 2s ease-in-out forwards;
+}
+header .nav-brand.active .brand-name-container::after {
+  animation: afterBorder 2s ease-in-out forwards;
+}
+header .nav-lang ul {
   list-style: none;
   display: flex;
   padding: 0.8rem;
@@ -105,17 +120,56 @@ nav .nav-lang ul {
   justify-content: space-around;
   align-items: center;
 }
-nav .nav-lang ul li {
+header .nav-lang ul li {
   font-size: 0.7rem;
   padding: 1px 4px;
 }
-nav .nav-lang ul li.active {
+header .nav-lang ul li.active {
   border: 1px solid #fff;
 }
 
 main {
   grid-area: main;
+}
+main #brand-image {
+  width: 100%;
+  height: 100%;
   background-image: url(images/1.jpg);
   background-size: cover;
   background-position: center;
+  transition: all 2s;
+}
+main #brand-image-sm {
+  display: none;
+  width: 100%;
+  height: 100%;
+  background-image: url(images/1sm.jpg);
+  background-size: cover;
+  background-position: center;
+  transition: all 2s;
+}
+
+@media (max-width: 1200px) {
+  main #brand-image {
+    display: none;
+  }
+  main #brand-image-sm {
+    display: block;
+  }
+}
+@keyframes beforeBorder {
+  from {
+    transform: translate(-90px, 5px) scaleX(0);
+  }
+  to {
+    transform: translate(-90px, 5px) scaleX(1);
+  }
+}
+@keyframes afterBorder {
+  from {
+    transform: translate(20px, 14px) scaleX(0);
+  }
+  to {
+    transform: translate(20px, 14px) scaleX(1);
+  }
 }/*# sourceMappingURL=home-style.css.map */

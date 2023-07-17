@@ -30,21 +30,21 @@ header {
   grid-template-rows: 1fr;
   grid-template-rows: 80px 1fr 30px;
 }
-header .nav-group-logo {
+
+.nav-group-logo {
   width: 95%;
   margin: 0 auto 2rem;
   transform: translateX(10px);
   opacity: 1;
-  transition: all 5s;
 }
-header .nav-brands-container {
+.nav-brands-container {
   width: 80%;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
   gap: 2rem;
 }
-header .nav-brand {
+.nav-brand {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -52,11 +52,11 @@ header .nav-brand {
   transition: all 1s;
   cursor: pointer;
 }
-header .nav-brand img {
+.nav-brand img {
   width: 50px;
   cursor: pointer;
 }
-header .nav-brand .brand-name-container {
+.nav-brand .brand-name-container {
   position: absolute;
   left: 100%;
   z-index: 1;
@@ -65,7 +65,7 @@ header .nav-brand .brand-name-container {
   pointer-events: none;
   transition: all 1s;
 }
-header .nav-brand .brand-name-container::before, header .nav-brand .brand-name-container::after {
+.nav-brand .brand-name-container::before, .nav-brand .brand-name-container::after {
   content: "";
   position: absolute;
   bottom: 0;
@@ -73,44 +73,44 @@ header .nav-brand .brand-name-container::before, header .nav-brand .brand-name-c
   height: 1px;
   background: rgba(255, 255, 255, 0.75);
 }
-header .nav-brand .brand-name-container::before {
+.nav-brand .brand-name-container::before {
   transform: translate(-90px, 5px) scaleX(0);
   transform-origin: left;
 }
-header .nav-brand .brand-name-container::after {
+.nav-brand .brand-name-container::after {
   right: 0;
   transform: translate(20px, 14px);
   transform-origin: right;
 }
-header .nav-brand .brand-name-container .brand-category {
+.nav-brand .brand-name-container .brand-category {
   font-size: 0.7rem;
   margin: 0;
 }
-header .nav-brand .brand-name-container .brand-name {
+.nav-brand .brand-name-container .brand-name {
   font-size: 1.2rem;
   margin: 0;
   margin-top: 0.5rem;
 }
-header .nav-brand .brand-name-container .text-icon {
+.nav-brand .brand-name-container .text-icon {
   position: absolute;
   width: 10px;
   right: 0;
   transform: translate(20px, -6px);
 }
-header .nav-brand.active {
+.nav-brand.active {
   transform: translateX(40px);
 }
-header .nav-brand.active .brand-name-container {
+.nav-brand.active .brand-name-container {
   opacity: 1;
   pointer-events: unset;
 }
-header .nav-brand.active .brand-name-container::before {
+.nav-brand.active .brand-name-container::before {
   animation: beforeBorder 2s ease-in-out forwards;
 }
-header .nav-brand.active .brand-name-container::after {
+.nav-brand.active .brand-name-container::after {
   animation: afterBorder 2s ease-in-out forwards;
 }
-header .nav-lang ul {
+.nav-lang ul {
   list-style: none;
   display: flex;
   padding: 0.8rem;
@@ -120,14 +120,87 @@ header .nav-lang ul {
   justify-content: space-around;
   align-items: center;
 }
-header .nav-lang ul li {
+.nav-lang ul li {
   font-size: 0.7rem;
   padding: 1px 4px;
 }
-header .nav-lang ul li.active {
+.nav-lang ul li.active {
   border: 1px solid #fff;
 }
 
+#menu {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  pointer-events: none;
+}
+#menu-hamburger {
+  position: absolute;
+  inset: 0 0 auto auto;
+  width: 80px;
+  height: 80px;
+  padding: 10px;
+  z-index: 2;
+  background: #D7AD7D;
+  color: #fff;
+  cursor: pointer;
+  pointer-events: initial;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+#menu-hamburger > div {
+  width: 50%;
+  height: 1px;
+  background: #fff;
+  transition: all 1s;
+}
+#menu-hamburger.open div:nth-child(1) {
+  transform: rotate(45deg) translate(8px, 8px);
+}
+#menu-hamburger.open div:nth-child(2) {
+  opacity: 0;
+}
+#menu-hamburger.open div:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+#menu-hamburger > p {
+  margin: 0;
+  font-family: "Noto Sans JP", sans-serif;
+  font-size: 0.6rem;
+  transition: all 1s;
+}
+#menu-container {
+  display: flex;
+  width: 0%;
+  height: 100%;
+  color: #fff;
+  font-family: "Noto Sans JP", sans-serif;
+  opacity: 0;
+  pointer-events: none;
+  transition: width 0s, opacity 1s;
+}
+#menu-container.open {
+  width: 100%;
+  opacity: 1;
+  pointer-events: initial;
+}
+#menu-container #menu-side {
+  width: 20%;
+  min-width: 300px;
+  background-image: url(images/bg_gmavi_left_x2.jpg);
+  background-size: cover;
+  background-position: center;
+}
+#menu-container #menu-side > div {
+  width: 182px;
+  height: 100%;
+  padding: 1rem;
+  display: grid;
+  grid-template-rows: 80px 1fr 30px;
+}
 main {
   grid-area: main;
 }

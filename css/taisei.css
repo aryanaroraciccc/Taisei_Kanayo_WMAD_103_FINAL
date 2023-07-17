@@ -1,3 +1,15 @@
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.content {
+  flex: 1;
+}
+
 .contact-container {
   display: flex;
   flex-direction: column;
@@ -10,7 +22,6 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border: solid;
 }
 .toggle-trigger .arrow {
   position: relative;
@@ -23,13 +34,55 @@
 }
 
 .contact-detail {
+  background-color: rgba(248, 233, 206, 0.701);
   opacity: 0;
   max-height: 0;
   overflow: hidden;
   transition: max-height 1s ease, opacity 1s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.contact-detail .btns button {
+  color: black;
+  background-color: white;
+}
+.contact-detail .btns .color-change-btn {
+  color: white;
+  background-color: black;
+}
+.contact-detail .hidden {
+  display: none;
+}
+.contact-detail form {
+  display: flex;
+  flex-direction: column;
 }
 
 .contact-detail.show {
   opacity: 1;
   max-height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.contact-detail.show .hidden {
+  display: none;
+}
+.contact-detail.show form {
+  display: flex;
+  flex-direction: column;
+}
+
+footer {
+  padding: 20px;
+  text-align: center;
+  color: rgb(185, 185, 185);
+  background-color: rgb(41, 41, 41);
+}
+footer a {
+  color: rgb(185, 185, 185);
+  text-decoration: none;
 }/*# sourceMappingURL=taisei.css.map */

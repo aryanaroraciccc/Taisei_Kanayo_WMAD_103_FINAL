@@ -10,52 +10,175 @@
 </head>
 <body>
   <nav><!--Kanayo part--></nav>
-  <div class="contact-container">
+  <div class=" content contact-container">
     <div class="contact-title">
       <h1>Contact</h1>
     </div>
     <div class="contact-menus">
+
+
+
+      <!-- INQUIRY/FEEDBACK -->
       <div class="contact-menu">
         <h2 class="toggle-trigger">GENERAL INQUIRY/FEEDBACK<span id="arrow" class="arrow">›</span></h2>
         <div class="contact-detail hidden">
-          <p>This is the content for General Inquiry/Feedback.</p>
+          <div class="detail-title">
+            <h3>Your feedback is important to us.</h3>
+            <p>All entries are required.</p>
+          </div>
+          <div class="btns">
+            <label>CONTACT US ABOUT:</label>
+            <button id="general-inquiry-button" class="color-change-btn">GENERAL INQUIRY</button>
+            <button id="feedback-button">FEEDBACK</button>
+          </div>
+
+          <div class="contact-forms">
+            <form id="general-inquiry-form">
+              <!-- GENERAL INQUIRY form fields -->
+              <label for="location">FOR:</label>
+              <select id="location" name="location" class="each-form">
+                <option value="" selected>Select your location</option>
+                <option value="Denman">Zakkushi on Denman</option>
+                <option value="Main">Zakkushi Dining on Main</option>
+                <option value="Carlton">Zakkushi on Carlton</option>
+              </select>
+
+              <label for="about-you">A BIT ABOUT YOU:</label>
+              <input type="text" name="first-name" placeholder="Your first name" id="first-name" class="each-form">
+              <input type="text" name="last-name" placeholder="Your last name" id="last-name" class="each-form">
+              <input type="text" name="email" placeholder="Email address" id="email" class="each-form">
+
+              <label for="your-mind">PLEASE SHARE WHAT'S ON YOUR MIND:</label>
+              <textarea placeholder="Enter your comment or question"></textarea>
+
+              <button type="submit">SEND</button>
+            </form>
+
+
+
+            <form id="feedback-form" class="hidden">
+              <!-- FEEDBACK form fields -->
+              <label>The details:</label>
+              <select id="order-type" name="order-type" class="each-form">
+                <option value="" selected>How did you place your order?</option>
+                <option value="Dine-in">Dine-in</option>
+                <option value="Take out">Take out</option>
+                <option value="Delivery">Delivery</option>
+              </select>
+
+              <select id="location" name="location" class="each-form">
+                <option value=""  selected>Select your location</option>
+                <option value="Denman">Zakkushi on Denman</option>
+                <option value="Main">Zakkushi Dining on Main</option>
+                <option value="Carlton">Zakkushi on Carlton</option>
+              </select>
+
+              <input type="date" name="date" class="each-form">
+
+              <select id="visist-time" name="visit-time" class="each-form">
+                <option value="" selected>Time of your visit or order</option>
+                <option value="Lunch">Lunch</option>
+                <option value="Dinner">Dinner</option>
+              </select>
+
+              <label for="about-you">A BIT ABOUT YOU:</label>
+              <input type="text" name="first-name" placeholder="Your first name" id="first-name" class="each-form">
+              <input type="text" name="last-name" placeholder="Your last name" id="last-name" class="each-form">
+              <input type="text" name="email" placeholder="Email address" id="email" class="each-form">
+
+              <label for="your-mind">PLEASE SHARE WHAT'S ON YOUR MIND:</label>
+              <textarea placeholder="Enter your comment or question"></textarea>
+              <button type="submit">SEND</button>
+            </form>
+          </div>
+          
         </div>
       </div>
+
+
+      <!-- MAKE A RESERVATION -->
       <div class="contact-menu">
         <h2 class="toggle-trigger">MAKE A RESERVATION<span id="arrow" class="arrow">›</span></h2>
         <div class="contact-detail hidden">
-          <form>
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name">
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email">
-            <button type="submit">Submit</button>
-          </form>
+          <h3>ZAKKUSHI</h3>
+          <div class="reservation-list">
+            <div class="each-reservation">
+              <h4>Denman</h4>
+              <span class="small-font">823 Denman St, Vancouver</span>
+              <p>Online ↗</p>
+            </div>
+
+            <div class="each-reservation">
+              <h4>Main</h4>
+              <span class="small-font">4075 Main St, Vancouver</span>
+              <p>Online ↗</p>
+            </div>
+
+            <div class="each-reservation">
+              <h4>Carlton</h4>
+              <span class="small-font">193 Carlton St, Vancouver</span>
+              <p>Online ↗</p>
+            </div>
+
+          </div>
         </div>
       </div>
+
+
+      <!-- CAREER -->
       <div class="contact-menu">
         <h2 class="toggle-trigger">CAREER OPPORTUNITIES<span id="arrow" class="arrow">›</span></h2>
         <div class="contact-detail hidden">
-          <p>This is the content for Career Opportunities.</p>
-          <p>hello</p>
-          <p>hello</p>
-          <p>hello</p>
-          <p>hello</p>
-          <p>hello</p>
-          <p>hello</p>
-          <p>hello</p>
-          <p>hello</p>
-          <p>hello</p>
-          <p>hello</p>
-          <p>hello</p>
-          <p>hello</p>
-          <p>hello</p>
-          <p>hello</p>
+          <div class="detail-title">
+            <h3>We are looking forward to your application!</h3>
+            <p>All entries are required.</p>
+          </div>
 
+          <div class="contact-forms">
+            <form id="apply-form">
+              <!-- APPLy form fields -->
+              <label for="location">APPLY TO:</label>
+              <select id="location" name="location" class="each-form">
+                <option value="" selected>Preferres location*</option>
+                <option value="Denman">Zakkushi on Denman</option>
+                <option value="Main">Zakkushi Dining on Main</option>
+                <option value="Carlton">Zakkushi on Carlton</option>
+              </select>
+              <input type="text" name="position" class="position" placeholder="Preferred position">
+              <span class="small-font">e.g. Kitchen, Server</span>
+
+              <label for="about-you">YOUR INFORMATION:</label>
+              <input type="text" name="first-name" placeholder="Your first name" id="first-name" class="each-form">
+              <input type="text" name="last-name" placeholder="Your last name" id="last-name" class="each-form">
+              <input type="text" name="email" placeholder="Email address" id="email" class="each-form">
+
+              <label for="upload-file">UPLOAD YOUR RESUME:</label>
+              <input type="file" name="file" placeholder="Upload" id="first-name" class="each-form">
+              <span class="small font">Accepted file types: pdf, docx, Max. file size: 3 MB, Max. files: 5.</p>
+
+              <label for="your-mind">TELL US WHAT MOTIVATED YOU TO APPLY TO OUR COMPANY?</label>
+              <textarea placeholder="Also, If you have any questions such as details, please feel free to comment here."></textarea>
+
+              <button type="submit">SEND</button>
+            </form>
+          </div>
+          
         </div>
       </div>
     </div>
   </div>
+
+  <footer>
+    <div class="footer-links">
+      <a href="group.html" class="footer-link">GROUP</a>
+      <a href="contact.html" class="footer-link">CONTACT US</a>
+      <a href="press.html" class="footer-link">PRESS</a>
+    </div>
+    <div class="copyright">
+      <p>Copyright © ZAKKUSHI.com. All Rights Reserved.</p>
+    </div>
+  </footer>
+
   <script src="js/taisei.js"></script>
 </body>
 </html>

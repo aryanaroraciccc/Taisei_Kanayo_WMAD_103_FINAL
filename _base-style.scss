@@ -1,5 +1,7 @@
 $serif-text: 'Noto Serif', serif;
 $sans-text: 'Noto Sans JP', sans-serif;
+$color-beige: #D7AD7D;
+$color-brown: #d67200;
 
 * {
     box-sizing: border-box;
@@ -8,9 +10,15 @@ $sans-text: 'Noto Sans JP', sans-serif;
 
 body {
     margin: 0;
+    overflow: hidden;
 }
 
 img {
     width: 100%;
     vertical-align: bottom;
+}
+
+a {
+    text-decoration: none;
+    color: unset;
 }

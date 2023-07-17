@@ -215,13 +215,15 @@ header {
   color: #d67200;
   font-family: "Noto Serif", serif;
   font-size: 1.15rem;
+  opacity: 0;
+  transition: opacity 0s;
 }
-#menu-container #menu-main ul {
+#menu-container #menu-main-pagelist {
   list-style: none;
   padding: 0;
   margin: 0;
 }
-#menu-container #menu-main ul li {
+#menu-container #menu-main-pagelist li {
   width: -moz-fit-content;
   width: fit-content;
   margin: 2rem 0;
@@ -230,16 +232,28 @@ header {
   align-items: center;
   transition: all 0.25s;
 }
-#menu-container #menu-main ul li:hover {
+#menu-container #menu-main-pagelist li:hover {
   transform: translateX(50px);
 }
-#menu-container #menu-main ul li::before {
+#menu-container #menu-main-pagelist li::before {
   content: "";
   width: 20px;
   height: 20px;
   display: block;
   background-image: url(images/ico_snowing_light.svg);
   background-size: cover;
+}
+#menu-container #menu-main-pagelist li:hover::before {
+  background-image: url(images/ico_snowing.svg);
+}
+#menu-container #menu-main-pagelist #our-menu {
+  cursor: pointer;
+}
+#menu-container #menu-main-pagelist #our-menu.chosen {
+  left: 30%;
+}
+#menu-container #menu-main-pagelist #our-menu.chosen::before {
+  background-image: url(images/ico_snowing.svg);
 }
 #menu-container #menu-main #buttons {
   margin-top: 60px;
@@ -279,6 +293,57 @@ header {
   position: absolute;
   left: 25%;
   top: 25%;
+}
+#menu-container.open #menu-main {
+  opacity: 1;
+}
+#menu-container #our-menu-container {
+  position: absolute;
+  inset: 8rem auto auto 50%;
+  transform: translate(-50%, 0);
+  opacity: 0;
+  transition: all 1s;
+}
+#menu-container #our-menu-container h3 {
+  font-family: "Noto Sans JP", sans-serif;
+  font-size: 0.8rem;
+  font-weight: 400;
+  color: #000;
+  letter-spacing: 1px;
+}
+#menu-container #our-menu-container.chosen {
+  opacity: 1;
+}
+#menu-container #our-menu-container .takeout {
+  margin-top: 80px;
+}
+#menu-container .menu-container-list {
+  width: 300px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  font-family: "Noto Sans JP", sans-serif;
+  font-weight: 400;
+  color: #000;
+}
+#menu-container .menu-container-list li {
+  width: inherit;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px dashed #D7AD7D;
+}
+#menu-container .menu-container-list li a {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+#menu-container .menu-container-list li span:first-child {
+  font-size: 0.9em;
+}
+#menu-container .menu-container-list li span:last-child {
+  font-size: 0.5em;
 }
 
 main {

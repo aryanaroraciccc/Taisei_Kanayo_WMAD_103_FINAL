@@ -236,8 +236,10 @@ header {
             color: $color-brown;
             font-family: $serif-text;
             font-size: 1.15rem;
+            opacity: 0;
+            transition: opacity 0s;
 
-            ul {
+            &-pagelist {
                 list-style: none;
                 padding: 0;
                 margin: 0;
@@ -263,6 +265,22 @@ header {
                             image: url(images/ico_snowing_light.svg);
                             size: cover;
                         };
+                    }
+
+                    &:hover {
+                        &::before {
+                            background-image: url(images/ico_snowing.svg);
+                        }
+                    }
+                }
+
+                #our-menu {
+                    cursor: pointer;
+                    &.chosen {
+                        left: 30%;
+                        &::before {
+                            background-image: url(images/ico_snowing.svg);
+                        }
                     }
                 }
             }
@@ -312,9 +330,70 @@ header {
                 }
             }
         }
+
+        &.open #menu-main {
+            opacity: 1;
+        }
+
+        #our-menu-container {
+            position: absolute;
+            inset: 8rem auto auto 50%;
+            transform: translate(-50%, 0);
+            opacity: 0;
+            transition: all 1s;
+
+            h3 {
+                font-family: $sans-text;
+                font-size: .8rem;
+                font-weight: 400;
+                color: #000;
+                letter-spacing: 1px;
+            }
+
+            &.chosen {
+                opacity: 1;
+            }
+
+            .takeout {
+                margin-top: 80px;
+            }
+        }
+
+        .menu-container-list {
+            width: 300px;
+            padding: 0;
+            margin: 0;
+            list-style: none;
+            font-family: $sans-text;
+            font-weight: 400;
+            color: #000;
+
+            li {
+                width: inherit;;
+                height: 60px;
+                display: flex;
+                align-items: center;
+                border-bottom: 1px dashed $color-beige;
+
+                a {
+                    width: 100%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                }
+
+                span:first-child {
+                    font-size: .9em;
+                }
+
+                span:last-child {
+                    font-size: .5em;
+                }
+            }
+
+        }
+
     }
-
-
 }
 
 

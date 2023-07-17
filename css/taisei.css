@@ -9,6 +9,87 @@ body {
 
 .content {
   flex: 1;
+  display: flex;
+  flex-direction: column;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+.content .press-lists .each-press {
+  border: solid;
+}
+.content .press-lists .each-press .press-image {
+  display: none;
+}
+.content .press-lists .each-press .detail {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.content .press-lists .each-press .detail p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.content .press-lists .each-press .tag p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.content .press-lists .each-press .press-content {
+  display: flex;
+  flex-direction: row;
+}
+.content .press-lists .each-press .press-content .press-image-medium img {
+  width: 100%;
+  height: auto;
+}
+@media (min-width: 1200px) {
+  .content .press-lists .each-press {
+    display: flex;
+    flex-direction: row;
+  }
+  .content .press-lists .each-press .press-image {
+    display: flex;
+    margin-right: 10px;
+    margin-bottom: 10px;
+  }
+  .content .press-lists .each-press .press-image img {
+    width: 60%;
+    height: auto;
+  }
+  .content .press-lists .each-press .press-other .press-content .press-image-medium {
+    display: none;
+  }
+  .content .press-lists .each-press .detail,
+  .content .press-lists .each-press .tag,
+  .content .press-lists .each-press .press-sentence {
+    flex-grow: 0;
+    width: 100%;
+  }
+}
+.content .page-links {
+  margin-left: 40%;
+  margin-right: 40%;
+  padding: 3% 0 3% 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+.content .page-links .current-link {
+  background-color: #D7AD7D;
+  color: white;
+}
+.content .page-links a {
+  text-decoration: none;
+  border: solid;
+  border-width: 1px;
+  font-size: 5px;
+  padding: 5px 10px 5px 10px;
+  background-color: white;
+  color: #D7AD7D;
+}
+.content .page-links a:hover {
+  background-color: #D7AD7D;
+  color: white;
 }
 
 .contact-container {

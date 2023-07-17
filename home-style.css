@@ -5,11 +5,17 @@
 
 body {
   margin: 0;
+  overflow: hidden;
 }
 
 img {
   width: 100%;
   vertical-align: bottom;
+}
+
+a {
+  text-decoration: none;
+  color: unset;
 }
 
 .container {
@@ -201,6 +207,80 @@ header {
   display: grid;
   grid-template-rows: 80px 1fr 30px;
 }
+#menu-container #menu-main {
+  width: 100%;
+  height: 100%;
+  padding: 4rem 5rem;
+  background-image: url(images/bk_nav.jpg);
+  color: #d67200;
+  font-family: "Noto Serif", serif;
+  font-size: 1.15rem;
+}
+#menu-container #menu-main ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+#menu-container #menu-main ul li {
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 2rem 0;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  transition: all 0.25s;
+}
+#menu-container #menu-main ul li:hover {
+  transform: translateX(50px);
+}
+#menu-container #menu-main ul li::before {
+  content: "";
+  width: 20px;
+  height: 20px;
+  display: block;
+  background-image: url(images/ico_snowing_light.svg);
+  background-size: cover;
+}
+#menu-container #menu-main #buttons {
+  margin-top: 60px;
+}
+#menu-container #menu-main #buttons .menu-button {
+  display: block;
+  width: 200px;
+  padding: 0.8rem;
+  margin-bottom: 1rem;
+  border: 1px solid #000;
+  background: #fff;
+  color: #000;
+  font-family: "Noto Sans JP", sans-serif;
+  font-weight: 400;
+  font-size: 0.8rem;
+  text-align: center;
+}
+#menu-container #menu-main #buttons .menu-button i {
+  padding-right: 0.5rem;
+  font-size: 1rem;
+}
+#menu-container #menu-main #buttons .menu-button:hover {
+  background: #000;
+  color: #fff;
+}
+#menu-container #menu-main #menu-cornerimage {
+  width: 450px;
+  height: 450px;
+  position: absolute;
+  inset: auto 0 0 auto;
+}
+#menu-container #menu-main #menu-cornerimage img {
+  transform: rotate(45deg);
+  width: 150%;
+  height: 150%;
+  transform-origin: center;
+  position: absolute;
+  left: 25%;
+  top: 25%;
+}
+
 main {
   grid-area: main;
 }

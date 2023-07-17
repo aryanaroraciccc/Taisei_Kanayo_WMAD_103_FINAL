@@ -29,6 +29,9 @@ let imgset = [
 ];
 let brandImage = document.getElementById("brand-image");
 let brandImageSm = document.getElementById("brand-image-sm");
+let menuContainer = document.getElementById("menu-container");
+let menuHamburger = document.getElementById("menu-hamburger");
+
 
 
 // rotate brand every 8 seconds
@@ -78,8 +81,22 @@ for (let i = 0; i < brand.length; i++) {
     });
 }
 
+// remove "active" class when mouse leaves
 for (let i = 0; i < brand.length; i++) {
     brand[i].addEventListener("mouseleave", () => {
         brand[i].classList.remove("active");
     });
 }
+let menuText = menuHamburger.getElementsByTagName("p")[0];
+   
+// open menu window when hamburger clicked
+menuHamburger.addEventListener("click", () => {
+    menuContainer.classList.toggle("open");
+    menuHamburger.classList.toggle("open");
+
+    if(menuText.innerText === "MENU") {
+        menuText.innerText = "CLOSE";
+    } else {
+        menuText.innerText = "MENU";
+    }
+})

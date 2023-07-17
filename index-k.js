@@ -31,6 +31,9 @@ let brandImage = document.getElementById("brand-image");
 let brandImageSm = document.getElementById("brand-image-sm");
 let menuContainer = document.getElementById("menu-container");
 let menuHamburger = document.getElementById("menu-hamburger");
+let menuText = menuHamburger.getElementsByTagName("p")[0];
+let ourMenu = document.getElementById("our-menu");
+let ourMenuContainer = document.getElementById("our-menu-container");
 
 
 
@@ -60,14 +63,14 @@ setInterval(rotateActiveBrand, 8000);
 for (let i = 0; i < brand.length; i++) {
     brand[i].addEventListener("mouseenter", () => {
         
-        // remove "active" if other elemet has it
+        // remove "active" if other elemets have it
         for (let j = 0; j < brand.length; j++) {
             if (brand[i] !== brand[j]) {
                 brand[j].classList.remove("active");
             }
         }
 
-        // add "active" to brand div
+        // add "active" to hovered element
         brand[i].classList.add("active");
 
         // set image
@@ -87,8 +90,7 @@ for (let i = 0; i < brand.length; i++) {
         brand[i].classList.remove("active");
     });
 }
-let menuText = menuHamburger.getElementsByTagName("p")[0];
-   
+
 // open menu window when hamburger clicked
 menuHamburger.addEventListener("click", () => {
     menuContainer.classList.toggle("open");
@@ -100,3 +102,10 @@ menuHamburger.addEventListener("click", () => {
         menuText.innerText = "MENU";
     }
 })
+
+// our menu location show
+ourMenu.addEventListener("click", () => {
+    ourMenu.classList.toggle("chosen");
+    ourMenuContainer.classList.toggle("chosen")
+})
+

@@ -7,12 +7,30 @@ body {
   margin-bottom: 0;
 }
 
+.nav {
+  border: solid;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 180px;
+  height: 100vh;
+  padding: 0;
+  margin: 0;
+}
+
 .content {
   flex: 1;
   display: flex;
   flex-direction: column;
-  margin-left: 10%;
-  margin-right: 10%;
+  margin-left: 180px;
+  margin-right: 0;
+  padding: 0 5% 0 5%;
+}
+.content .press-title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 .content .press-lists .each-press {
   border-bottom-style: dotted;
@@ -319,8 +337,34 @@ footer {
   text-align: center;
   color: rgb(185, 185, 185);
   background-color: rgb(41, 41, 41);
+  margin-left: 180px;
+  font-size: 10px;
+}
+footer .footer-links {
+  border-bottom-style: solid;
+  border-color: rgb(185, 185, 185);
+  border-width: 1px;
+  display: flex;
+  justify-content: space-evenly;
 }
 footer a {
   color: rgb(185, 185, 185);
   text-decoration: none;
+}
+
+@media (min-width: 1200px) {
+  footer {
+    display: flex;
+    justify-content: space-between;
+  }
+  footer .footer-links {
+    width: 30%;
+    border-bottom-style: none;
+    display: flex;
+    justify-content: space-between;
+  }
+  footer a {
+    color: rgb(185, 185, 185);
+    text-decoration: none;
+  }
 }/*# sourceMappingURL=taisei.css.map */

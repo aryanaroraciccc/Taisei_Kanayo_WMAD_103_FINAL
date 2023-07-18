@@ -21,14 +21,34 @@ body {
 }
 
 
+// Kanayyo nav
+.nav {
+  border: solid;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 180px;
+  height: 100vh;
+  padding: 0;
+  margin: 0;
+}
+
+
 //press 
 .content {
   flex: 1;
   display: flex;
   flex-direction: column;
+  margin-left: 180px;
+  margin-right: 0;
+  padding:0 5% 0 5% ;
 
-  margin-left: 10%;
-  margin-right: 10%;
+  .press-title{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 
   .press-lists{
     .each-press{
@@ -95,9 +115,7 @@ body {
           }
           
         }
-        
-        
-
+     
       .detail,
       .tag,
       .press-sentence {
@@ -107,15 +125,11 @@ body {
       
       }
     
-      
-      
     }
   }
 
 
   .page-links{
-    
-
     margin-left:40%;
     margin-right: 40%;
     padding: 3% 0 3% 0;
@@ -439,10 +453,38 @@ footer{
   text-align: center;
   color: $footer-font;
   background-color:$footer-backgournd;
+  margin-left: 180px;
+  font-size:10px;
+
+  .footer-links{
+    border-bottom-style: solid;
+    border-color:$footer-font ;
+    border-width: 1px;
+    display: flex;
+    justify-content: space-evenly;
+  }
 
   a{
     color:$footer-font;
     text-decoration: none;
+  }
+}
+
+@media (min-width: 1200px){
+  footer{
+    display: flex;
+    justify-content: space-between;
+    .footer-links{
+      width:30%;
+      border-bottom-style: none;
+      display: flex;
+      justify-content: space-between;
+    }
+  
+    a{
+      color:$footer-font;
+      text-decoration: none;
+    }
   }
 }
 

@@ -8,20 +8,44 @@ body {
 }
 
 .nav {
+  background-color: black;
+  color: white;
   border: solid;
   position: fixed;
-  left: 0;
   top: 0;
-  width: 180px;
-  height: 100vh;
+  width: 100%;
+  height: 100px;
   padding: 0;
   margin: 0;
 }
 
+@media (min-width: 1200px) {
+  .nav {
+    border: solid;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 180px;
+    height: 100vh;
+    padding: 0;
+    margin: 0;
+  }
+}
+@media (min-width: 1200px) {
+  .content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    margin-left: 180px;
+    margin-right: 0;
+    padding-left: 180px;
+  }
+}
 .content {
   flex: 1;
   display: flex;
   flex-direction: column;
+  margin-top: 100px;
   margin-left: 180px;
   margin-right: 0;
   padding: 0 5% 0 5%;
@@ -112,21 +136,44 @@ body {
   color: white;
 }
 
-.contact-menus {
-  width: 80%;
-  margin-right: 0;
-  margin-left: 180px;
+@media (min-width: 1200px) {
+  .contact-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: 180px;
+  }
+  .contact-container .contact-menus {
+    width: 80%;
+    margin-right: 0;
+    margin-left: 0;
+    padding-left: 0;
+  }
+  .contact-container .contact-menus .contact-menu {
+    padding-top: 0;
+    margin-top: 0;
+  }
+  .contact-container h2 {
+    font-size: 15px;
+  }
 }
-.contact-menus .contact-menu {
-  padding-top: 0;
-  margin-top: 0;
-}
-
 .contact-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-left: 180px;
+}
+.contact-container .contact-menus {
+  width: 80%;
+  margin-right: 0;
+  margin-left: 0;
+  padding-left: 0;
+}
+.contact-container .contact-menus .contact-menu {
+  padding-top: 0;
+  margin-top: 0;
 }
 .contact-container h2 {
   font-size: 15px;
@@ -141,8 +188,9 @@ body {
   border-width: 1px;
   border-color: #D7AD7D;
   padding-bottom: 5%;
-  padding-top: 0;
+  padding-top: 5%;
   margin-bottom: 0;
+  margin-left: 0;
 }
 .toggle-trigger .arrow {
   position: relative;
@@ -152,6 +200,10 @@ body {
 }
 .toggle-trigger .arrow.toggle-arrow-animation {
   transform: rotate(-90deg);
+}
+
+.back-color {
+  background-color: #fff5ea;
 }
 
 .contact-detail {
@@ -337,7 +389,7 @@ footer {
   text-align: center;
   color: rgb(185, 185, 185);
   background-color: rgb(41, 41, 41);
-  margin-left: 180px;
+  margin-left: 0;
   font-size: 10px;
 }
 footer .footer-links {
@@ -356,6 +408,7 @@ footer a {
   footer {
     display: flex;
     justify-content: space-between;
+    margin-left: 180px;
   }
   footer .footer-links {
     width: 30%;

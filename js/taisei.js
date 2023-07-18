@@ -2,9 +2,10 @@
 // クリックイベントを追加する関数
 function addClickEvent(element, target) {
     element.addEventListener("click", function() {
-        //h2をクリックすることで、2つのアニメーションを惹起する
+        //h2をクリックすることで、3つのアニメーションを惹起する
       target.classList.toggle("show");
       element.querySelector('.arrow').classList.toggle('toggle-arrow-animation');
+      element.classList.toggle("back-color");
     });
   }
   

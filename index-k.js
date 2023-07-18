@@ -36,61 +36,6 @@ let ourMenu = document.getElementById("our-menu");
 let ourMenuContainer = document.getElementById("our-menu-container");
 
 
-
-// rotate brand every 8 seconds
-// *from here* I wrote this part using chatGPT!!!
-let activeIndex = 0;
-function setActiveBrand(index) {
-    for (let i = 0; i < brand.length; i++) {
-        brand[i].classList.remove("active");
-    }
-    brand[index].classList.add("active");
-    brandImage.style.backgroundImage = `url(${imgset[index].img})`;
-    brandImageSm.style.backgroundImage = `url(${imgset[index].imgsm})`;
-}
-
-function rotateActiveBrand() {
-    setActiveBrand(activeIndex);
-    activeIndex = (activeIndex + 1) % brand.length;
-}
-
-setInterval(rotateActiveBrand, 8000);
-// *to here* I wrote this part using chatGPT!!!
-
-
-
-// brand logo hover
-for (let i = 0; i < brand.length; i++) {
-    brand[i].addEventListener("mouseenter", () => {
-        
-        // remove "active" if other elemets have it
-        for (let j = 0; j < brand.length; j++) {
-            if (brand[i] !== brand[j]) {
-                brand[j].classList.remove("active");
-            }
-        }
-
-        // add "active" to hovered element
-        brand[i].classList.add("active");
-
-        // set image
-        let brandName = brand[i].getAttribute("name");
-        for (let j = 0; j < imgset.length; j++) {
-            if (brandName === imgset[j].name) {
-                brandImage.style.backgroundImage = `url(${imgset[j].img})`;
-                brandImageSm.style.backgroundImage = `url(${imgset[j].imgsm})`;
-            }
-        }
-    });
-}
-
-// remove "active" class when mouse leaves
-for (let i = 0; i < brand.length; i++) {
-    brand[i].addEventListener("mouseleave", () => {
-        brand[i].classList.remove("active");
-    });
-}
-
 // open menu window when hamburger clicked
 menuHamburger.addEventListener("click", () => {
     menuContainer.classList.toggle("open");

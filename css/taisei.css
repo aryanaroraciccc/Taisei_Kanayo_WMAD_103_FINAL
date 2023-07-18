@@ -7,20 +7,26 @@ body {
   margin-bottom: 0;
 }
 
-.nav {
+h1 {
+  border-bottom-style: solid;
+  border-width: 1.5px;
+  border-color: #D7AD7D;
+}
+
+.header {
   background-color: black;
   color: white;
   border: solid;
   position: fixed;
   top: 0;
   width: 100%;
-  height: 100px;
+  height: 115px;
   padding: 0;
   margin: 0;
 }
 
 @media (min-width: 1200px) {
-  .nav {
+  .header {
     border: solid;
     position: fixed;
     left: 0;
@@ -29,6 +35,90 @@ body {
     height: 100vh;
     padding: 0;
     margin: 0;
+  }
+}
+.nav-menu {
+  position: fixed;
+  background-color: black;
+  color: white;
+  display: none;
+  width: 100%;
+  margin-bottom: 0;
+  padding-bottom: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: 0;
+  justify-content: space-between;
+  align-items: center;
+}
+@media (max-width: 1200px) {
+  .nav-menu {
+    height: 90px;
+    display: flex;
+  }
+}
+@media (max-width: 768px) {
+  .nav-menu {
+    height: 70px;
+    display: flex;
+  }
+}
+
+footer {
+  padding: 20px;
+  text-align: center;
+  color: rgb(185, 185, 185);
+  background-color: rgb(41, 41, 41);
+  margin-left: 0;
+  font-size: 10px;
+  display: none;
+}
+@media (max-width: 1200px) {
+  footer {
+    height: 80px;
+    margin-bottom: 90px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+}
+@media (max-width: 768px) {
+  footer {
+    height: 80px;
+    margin-bottom: 70px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+}
+footer .footer-links {
+  border-bottom-style: solid;
+  border-color: rgb(185, 185, 185);
+  border-width: 1px;
+  display: flex;
+  justify-content: space-evenly;
+}
+footer a {
+  color: rgb(185, 185, 185);
+  text-decoration: none;
+}
+
+@media (min-width: 1200px) {
+  footer {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 180px;
+  }
+  footer .footer-links {
+    width: 30%;
+    border-bottom-style: none;
+    display: flex;
+    justify-content: space-between;
+  }
+  footer a {
+    color: rgb(185, 185, 185);
+    text-decoration: none;
   }
 }
 @media (min-width: 1200px) {
@@ -49,6 +139,7 @@ body {
   margin-left: 180px;
   margin-right: 0;
   padding: 0 5% 0 5%;
+  margin-bottom: 100px;
 }
 .content .press-title {
   display: flex;
@@ -193,6 +284,7 @@ body {
   margin-left: 0;
 }
 .toggle-trigger .arrow {
+  color: #D7AD7D;
   position: relative;
   display: inline-block;
   transition: transform 1s ease-in-out;
@@ -382,42 +474,4 @@ body {
 .contact-detail.show form {
   display: flex;
   flex-direction: column;
-}
-
-footer {
-  padding: 20px;
-  text-align: center;
-  color: rgb(185, 185, 185);
-  background-color: rgb(41, 41, 41);
-  margin-left: 0;
-  font-size: 10px;
-}
-footer .footer-links {
-  border-bottom-style: solid;
-  border-color: rgb(185, 185, 185);
-  border-width: 1px;
-  display: flex;
-  justify-content: space-evenly;
-}
-footer a {
-  color: rgb(185, 185, 185);
-  text-decoration: none;
-}
-
-@media (min-width: 1200px) {
-  footer {
-    display: flex;
-    justify-content: space-between;
-    margin-left: 180px;
-  }
-  footer .footer-links {
-    width: 30%;
-    border-bottom-style: none;
-    display: flex;
-    justify-content: space-between;
-  }
-  footer a {
-    color: rgb(185, 185, 185);
-    text-decoration: none;
-  }
 }/*# sourceMappingURL=taisei.css.map */

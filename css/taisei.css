@@ -15,7 +15,9 @@ body {
   margin-right: 10%;
 }
 .content .press-lists .each-press {
-  border: solid;
+  border-bottom-style: dotted;
+  border-color: #D7AD7D;
+  margin-top: 3%;
 }
 .content .press-lists .each-press .press-image {
   display: none;
@@ -92,11 +94,24 @@ body {
   color: white;
 }
 
+.contact-menus {
+  width: 80%;
+  margin-right: 0;
+  margin-left: 180px;
+}
+.contact-menus .contact-menu {
+  padding-top: 0;
+  margin-top: 0;
+}
+
 .contact-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+.contact-container h2 {
+  font-size: 15px;
 }
 
 .toggle-trigger {
@@ -104,6 +119,12 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  border-bottom-style: solid;
+  border-width: 1px;
+  border-color: #D7AD7D;
+  padding-bottom: 5%;
+  padding-top: 0;
+  margin-bottom: 0;
 }
 .toggle-trigger .arrow {
   position: relative;
@@ -116,7 +137,8 @@ body {
 }
 
 .contact-detail {
-  background-color: rgba(248, 233, 206, 0.701);
+  background-color: #fff5ea;
+  padding: 3% 3% 3% 3%;
   opacity: 0;
   max-height: 0;
   overflow: hidden;
@@ -126,20 +148,154 @@ body {
   justify-content: center;
   align-items: center;
 }
-.contact-detail .btns button {
+.contact-detail .reservation-title {
+  justify-self: left;
+}
+.contact-detail .reservation-title .h4 img {
+  margin-right: 1px;
+}
+.contact-detail .reservation-list {
+  background-color: white;
+  margin-left: 1%;
+  margin-right: 1%;
+  padding-left: 2%;
+  padding-right: 2%;
+  width: 80%;
+}
+.contact-detail .reservation-list .each-reservation {
+  border-bottom-style: dotted;
+  border-width: 1px;
+  border-color: #D7AD7D;
+}
+.contact-detail .reservation-list .each-reservation .reservation-location {
+  display: flex;
+  flex-direction: column;
+}
+.contact-detail .reservation-list .each-reservation .reservation-location h4 {
+  margin: 0 0 0 0;
+  padding: 0 1px 0 1px;
+}
+.contact-detail .reservation-list .each-reservation .reservation-location h4 img {
+  margin-right: 1%;
+}
+.contact-detail .reservation-list .each-reservation .reservation-location .small-font {
+  margin: 0 0 0 0;
+  padding: 0 0 0 0;
+  color: #D7AD7D;
+  font-size: 12px;
+}
+.contact-detail .reservation-list .each-reservation .reservation-other {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.contact-detail .reservation-list .each-reservation .reservation-other p {
+  width: 100%;
+}
+.contact-detail .reservation-list .each-reservation .reservation-other p img {
+  margin-right: 1%;
+}
+.contact-detail .detail-title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  padding-top: 1%;
+  padding-bottom: 1%;
+}
+.contact-detail .detail-title h3 {
+  font-size: 25px;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.contact-detail .detail-title p {
+  font-size: 13px;
+  margin-top: 0;
+  margin-bottom: 0;
+  color: #D7AD7D;
+}
+.contact-detail .btns-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.contact-detail .btns-container .btns {
+  display: flex;
+  flex-direction: row;
+}
+.contact-detail .btns-container .btns button {
+  width: 50%;
+  height: 50px;
   color: black;
+  border-width: 1px;
   background-color: white;
 }
-.contact-detail .btns .color-change-btn {
+.contact-detail .btns-container .btns .color-change-btn {
   color: white;
   background-color: black;
 }
-.contact-detail .hidden {
-  display: none;
+.contact-detail .contact-forms {
+  width: 100%;
 }
-.contact-detail form {
+.contact-detail .contact-forms form {
+  width: 100%;
   display: flex;
   flex-direction: column;
+}
+.contact-detail .contact-forms form .each-form-group {
+  width: 100%;
+  margin-top: 4%;
+  margin-bottom: 4%;
+  display: flex;
+  flex-direction: column;
+}
+.contact-detail .contact-forms form .each-form-group input, .contact-detail .contact-forms form .each-form-group select {
+  height: 50px;
+  margin-top: 2%;
+  margin-bottom: 2%;
+}
+.contact-detail .contact-forms form .each-form-group textarea {
+  height: 200px;
+}
+.contact-detail .contact-forms form .each-form-group .each-form-file {
+  height: 50px;
+  border: solid;
+  border-width: 1px;
+  background-color: white;
+}
+.contact-detail .contact-forms form .each-form-group .each-form-file input {
+  margin: 0 0 0 0;
+  height: 50px;
+  width: 100%;
+  color: white;
+  background-color: white;
+}
+.contact-detail .contact-forms form .each-form-group .small-font {
+  font-size: 12px;
+}
+.contact-detail .contact-forms form .submit {
+  display: flex;
+  flex-direction: column;
+  margin-top: 0;
+  padding-top: 0;
+}
+.contact-detail .contact-forms form .submit button {
+  margin-top: 0;
+  padding-top: 0;
+  justify-self: center;
+  align-self: center;
+  border-width: 1px;
+  width: 40%;
+  height: 30px;
+  color: white;
+  background-color: black;
+}
+.contact-detail .contact-forms form .submit button:hover {
+  color: black;
+  background-color: white;
+}
+.contact-detail .hidden {
+  display: none;
 }
 
 .contact-detail.show {

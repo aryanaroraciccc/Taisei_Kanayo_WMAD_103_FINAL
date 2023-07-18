@@ -1,0 +1,185 @@
+@import "base-style";
+@import "home-style";
+
+.container.page-group {
+    header {
+        grid-template-rows: auto auto 1fr auto;
+
+        #breadcrumb {
+            background: #333;
+            padding: 10px 0;
+            margin-bottom: 20px;
+            text-align: center;
+            p {
+                margin: 0;
+                font-size: 0.7rem;
+            }
+        }
+    }
+}
+
+#group-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+
+    .group {
+        width: 100%;
+        height: 100%;
+        transition: all 0.5s;
+        // transition-timing-function: ease-in;
+
+        &::before {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.3);
+            z-index: 1;
+            transition: all 0.5s;
+            // transition-timing-function: ease-in;
+        }
+
+        &::after {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: {
+                size: cover;
+                position: center;
+            }
+            transition: all 1s;
+        }
+
+        &:hover {
+            width: 120%;
+            z-index: 2;
+
+            &::before {
+                background-color: transparent;
+            }
+
+            &::after {
+                transform: scale(1.1);
+            }
+        }
+
+        &.yakitori::after {
+            background-image: url(images/zakkushi_2x.jpg);
+        }
+
+        &.ramen::after {
+            background-image: url(images/ramen_2x.jpg);
+        }
+
+        &.dining::after {
+            background-image: url(images/IMG_0179-1.webp);
+        }
+
+        &.frozen::after {
+            background-image: url(images/frozen_ramen_2x.jpg);
+        }
+
+        &-contents {
+            width: 80%;
+            max-width: 230px;
+            position: absolute;
+            inset: 50% auto auto 50%;
+            transform: translate(-50%, 0);
+            z-index: 1;
+            color: #fff;
+
+            h3 {
+                font-size: 1.5rem;
+                font-weight: 400;
+                text-align: center;
+                margin-top: 0;
+            }
+
+            .brandlink {
+                width: 100%;
+
+                a {
+                    display: block;
+
+                    .brand-logo-container {
+                        background-color: rgba(255, 255, 255, 0.2);
+                        width: 100%;
+                        height: 60px;
+                        display: flex;
+                        align-items: center;
+                        transition: all .25s;
+
+                        &:hover {
+                            background-color: rgba(255, 255, 255, 0.5);
+                            transform: scale(1.05);
+                        }
+                    }
+
+                    .brand-logo {
+                        width: 100%;
+                        height: 50px;
+                        background: {
+                            size: contain;
+                            repeat: no-repeat;
+                            position: center;
+                        }
+                        transition: all .25s;
+
+                        &.zakkushi {
+                            background-image: url(images/zks_2x.png);
+                        }
+
+                        &.raijin {
+                            background-image: url(images/raijin_2x.png);
+                        }
+
+                        &.raizo {
+                            background-image: url(images/raizo_2x.png);
+                        }
+
+                        &.hashigo {
+                            background-image: url(images/hashigo_2x.png);
+                        }
+
+                        &.lab {
+                            background-image: url(images/logo_franklin_food_lab_y_w.svg);
+                        }
+
+                        &:hover {
+                                
+                            &.zakkushi {
+                                background-image: url(images/zks_2x_hov.png);
+                            }
+
+                            &.raijin {
+                                background-image: url(images/raijin_2x_hov.png);
+                            }
+
+                            &.raizo {
+                                background-image: url(images/raizo_2x_hov.png);
+                            }
+
+                            &.hashigo {
+                                background-image: url(images/hashigo_2x_hov.webp);
+                            }
+
+                            &.lab {
+                                background-image: url(images/logo_franklin_food_lab_y_w.svg);
+                            }
+                        }
+
+                    }
+                }
+            }
+
+            p {
+                text-align: right;
+                font-size: 0.7rem;
+                font-family: $sans-text;
+                margin-top: 0;
+            }
+        }
+    }
+}

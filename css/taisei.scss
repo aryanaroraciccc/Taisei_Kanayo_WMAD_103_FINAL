@@ -16,6 +16,9 @@ body {
   margin-right: 0;
   margin-bottom: 0;
 
+  font-family: $serif-text;
+  font-style: $sans-text;
+
 }
 
 //press&conatct h1
@@ -77,6 +80,10 @@ h1{
     display: flex;
   }
 }
+
+
+
+
 
 
 
@@ -161,7 +168,7 @@ footer{
   display: flex;
   flex-direction: column;
   margin-top: 100px;
-  margin-left: 180px;
+  margin-left: 10%;
   margin-right: 0;
   padding:0 5% 0 5% ;
   margin-bottom:100px;
@@ -317,7 +324,7 @@ footer{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-left: 180px;
+    margin-left: 10%;
     //contact page
     .contact-menus{
       width:80%;

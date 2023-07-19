@@ -5,6 +5,8 @@ body {
   margin-left: 0;
   margin-right: 0;
   margin-bottom: 0;
+  font-family: "Noto Serif", serif;
+  font-style: "Noto Sans JP", sans-serif;
 }
 
 h1 {
@@ -136,7 +138,7 @@ footer a {
   display: flex;
   flex-direction: column;
   margin-top: 100px;
-  margin-left: 180px;
+  margin-left: 10%;
   margin-right: 0;
   padding: 0 5% 0 5%;
   margin-bottom: 100px;
@@ -254,7 +256,7 @@ footer a {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-left: 180px;
+  margin-left: 10%;
 }
 .contact-container .contact-menus {
   width: 80%;

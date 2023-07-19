@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="home-style.css">
+    <link rel="stylesheet" href="home-media-style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;600&family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif:wght@400;500;700&&family=Squada+One&display=swap" rel="stylesheet">
@@ -14,7 +15,7 @@
     <div class="container">
         <header>
             <div class="nav-group-logo">
-                <img src="images/website_logo.svg" alt="">
+                <a href="index.html"><img src="images/website_logo.svg" alt=""></a>
             </div>
             <div class="nav-brands-container">
                 <div class="nav-brand active default" name="zakkushi">
@@ -58,6 +59,7 @@
                     </div>
                 </div>
             </div>
+
             <div class="nav-lang">
                 <ul>
                     <li class="nav-lang-en active">EN</li>
@@ -66,6 +68,23 @@
                 </ul>
             </div>
         </header>
+        <div id="nav-brands-container-mobile" class="nav">
+            <div class="nav-brand-mobile active" name="zakkushi">
+                <img src="images/zks_2x.png" alt="">
+            </div>
+            <div class="nav-brand-mobile" name="raijin">
+                <img src="images/raijin_2x.png" alt="">
+            </div>
+            <div class="nav-brand-mobile" name="raizo">
+                <img src="images/raizo_2x.png" alt="">
+            </div>
+            <div class="nav-brand-mobile" name="hashigo">
+                <img src="images/logo_hashigo.webp" alt="">
+            </div>
+            <div class="nav-brand-mobile" name="lab">
+                <img src="images/logo_franklin_food_lab_y_w.svg" alt="">
+            </div>
+        </div>
         <section id="menu">
             <div id="menu-hamburger" class="">
                 <div class="menu-hamburger-line"></div>
@@ -161,8 +180,37 @@
         <main>
             <div id="brand-image"></div>
             <div id="brand-image-sm"></div>
-            
+            <div id="brand-name-mobile">
+                <div class="brand-name-container-mobile active" name="zakushi">
+                    <p class="brand-category">YAKITORI IZAKAYA</p>
+                    <p class="brand-name">ZAKKUSHI</p>
+                    <img class="text-icon" src="images/text_icon.svg" alt="text icon">
+                </div>
+                <div class="brand-name-container-mobile" name="raijin">
+                    <p class="brand-category">JAPANESE NOODLE BAR / FROZEN RAMEN</p>
+                    <p class="brand-name">ramen RAIJIN</p>
+                    <img class="text-icon" src="images/text_icon.svg" alt="text icon">
+                </div>
+                <div class="brand-name-container-mobile" name="raizo">
+                    <p class="brand-category">JAPANESE NOODLE BAR</p>
+                    <p class="brand-name">Menya RAIZO</p>
+                    <img class="text-icon" src="images/text_icon.svg" alt="text icon">
+                </div>
+                <div class="brand-name-container-mobile" name="hashigo">
+                    <p class="brand-category">SAKE DINING</p>
+                    <p class="brand-name">HASHIGO</p>
+                    <img class="text-icon" src="images/text_icon.svg" alt="text icon">
+                </div>
+                <div class="brand-name-container-mobile" name="lab">
+                    <p class="brand-category">FROZEN NOODLE</p>
+                    <p class="brand-name">Franklin Food Lab</p>
+                    <img class="text-icon" src="images/text_icon.svg" alt="text icon">
+                </div>
+            </div>
         </main>
+        <section id="footer-mobile">
+            mobile-footer
+        </section>
     </div>
     <script src="home.js"></script>
     <script src="index-k.js"></script>

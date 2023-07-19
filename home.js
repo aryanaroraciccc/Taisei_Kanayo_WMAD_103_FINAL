@@ -34,33 +34,35 @@ let menuHamburger = document.getElementById("menu-hamburger");
 let menuText = menuHamburger.getElementsByTagName("p")[0];
 let ourMenu = document.getElementById("our-menu");
 let ourMenuContainer = document.getElementById("our-menu-container");
-
+let brandMobile = document.getElementsByClassName("nav-brand-mobile");
+let brandNamesMobile = document.getElementsByClassName("brand-name-container-mobile");
 
 
 // rotate brand every 8 seconds
 // *from here* I wrote this part using chatGPT!!!
-let activeIndex = 0;
-function setActiveBrand(index) {
-    for (let i = 0; i < brand.length; i++) {
-        brand[i].classList.remove("active");
-    }
-    brand[index].classList.add("active");
-    brandImage.style.backgroundImage = `url(${imgset[index].img})`;
-    brandImageSm.style.backgroundImage = `url(${imgset[index].imgsm})`;
-}
+// let activeIndex = 0;
+// function setActiveBrand(index) {
+//     for (let i = 0; i < brand.length; i++) {
+//         brand[i].classList.remove("active");
+//     }
+//     brand[index].classList.add("active");
+//     brandImage.style.backgroundImage = `url(${imgset[index].img})`;
+//     brandImageSm.style.backgroundImage = `url(${imgset[index].imgsm})`;
+// }
 
-function rotateActiveBrand() {
-    setActiveBrand(activeIndex);
-    activeIndex = (activeIndex + 1) % brand.length;
-}
+// function rotateActiveBrand() {
+//     setActiveBrand(activeIndex);
+//     activeIndex = (activeIndex + 1) % brand.length;
+// }
 
-setInterval(rotateActiveBrand, 8000);
+// setInterval(rotateActiveBrand, 8000);
 // *to here* I wrote this part using chatGPT!!!
 
 
 
 // brand logo hover
 for (let i = 0; i < brand.length; i++) {
+    let brandName = brand[i].getAttribute("name");
     brand[i].addEventListener("mouseenter", () => {
         
         // remove "active" if other elemets have it
@@ -74,7 +76,34 @@ for (let i = 0; i < brand.length; i++) {
         brand[i].classList.add("active");
 
         // set image
-        let brandName = brand[i].getAttribute("name");
+        for (let j = 0; j < imgset.length; j++) {
+            if (brandName === imgset[j].name) {
+                brandImage.style.backgroundImage = `url(${imgset[j].img})`;
+                brandImageSm.style.backgroundImage = `url(${imgset[j].imgsm})`;
+            }
+        }
+    });
+}
+
+// mobile brand logo tap
+for (let i = 0; i < brand.length; i++) {
+    let brandName = brandMobile[i].getAttribute("name");
+
+    brandMobile[i].addEventListener("click", () => {
+        
+        // remove "active" if other elemets have it
+        for (let j = 0; j < brandMobile.length; j++) {
+            if (brandMobile[i] !== brandMobile[j]) {
+                brandMobile[j].classList.remove("active");
+                brandNamesMobile[j].classList.remove("active");
+            }
+        }
+
+        // add "active" to hovered element
+        brandMobile[i].classList.add("active");
+        brandNamesMobile[i].classList.add("active");
+
+        // set image
         for (let j = 0; j < imgset.length; j++) {
             if (brandName === imgset[j].name) {
                 brandImage.style.backgroundImage = `url(${imgset[j].img})`;

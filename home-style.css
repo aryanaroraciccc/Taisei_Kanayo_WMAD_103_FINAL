@@ -65,6 +65,8 @@ header {
   cursor: pointer;
 }
 .nav-brand .brand-name-container {
+  color: #fff;
+  font-family: "Noto Sans JP", sans-serif;
   position: absolute;
   left: 100%;
   z-index: 1;
@@ -356,6 +358,7 @@ header {
 
 main {
   grid-area: main;
+  background-color: #000;
 }
 main #brand-image {
   width: 100%;
@@ -363,7 +366,7 @@ main #brand-image {
   background-image: url(images/1.jpg);
   background-size: cover;
   background-position: center;
-  transition: all 2s;
+  transition: all 1.5s;
 }
 main #brand-image-sm {
   display: none;
@@ -375,14 +378,6 @@ main #brand-image-sm {
   transition: all 2s;
 }
 
-@media (max-width: 1200px) {
-  main #brand-image {
-    display: none;
-  }
-  main #brand-image-sm {
-    display: block;
-  }
-}
 @keyframes beforeBorder {
   from {
     transform: translate(-90px, 5px) scaleX(0);

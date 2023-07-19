@@ -53,9 +53,9 @@ header {
             cursor: pointer;
         }
 
-
-
         .brand-name-container {
+            color: #fff;
+            font-family: $sans-text;
             position: absolute;
             left: 100%;
             z-index: 1;
@@ -72,29 +72,29 @@ header {
                 height: 1px;
                 background: rgba(255,255,255,.75);
             }
-
+    
             &::before {
                 transform: translate(-90px, 5px) scaleX(0);
                 transform-origin: left;
             }
-
+    
             &::after {
                 right: 0;
                 transform: translate(20px, 14px);
                 transform-origin: right;
             }
-
+    
             .brand-category {
                 font-size: .7rem;
                 margin: 0;
             }
-
+    
             .brand-name {
                 font-size: 1.2rem;
                 margin: 0;
                 margin-top: .5rem;
             }
-
+    
             .text-icon {
                 position: absolute;
                 width: 10px;
@@ -119,6 +119,8 @@ header {
             }
         }
     }
+
+    
 
     &-lang {
         padding: 1rem;
@@ -403,12 +405,9 @@ header {
     }
 }
 
-
-
-
-
 main {
     grid-area: main;
+    background-color: #000;
 
     #brand-image {
         width: 100%;
@@ -418,7 +417,7 @@ main {
             size: cover;
             position: center;
         };
-        transition: all 2s;
+        transition: all 1.5s;
     }
 
     #brand-image-sm {
@@ -436,17 +435,6 @@ main {
 
 }
 
-@media (max-width: 1200px) {
-    main #brand-image {
-        display: none;
-    }
-    main #brand-image-sm {
-        display: block;
-    }
-}
-
-
-
 @keyframes beforeBorder {
     from {
         transform: translate(-90px, 5px) scaleX(0);
@@ -463,3 +451,4 @@ main {
         transform: translate(20px, 14px) scaleX(1);
     }
 }
+

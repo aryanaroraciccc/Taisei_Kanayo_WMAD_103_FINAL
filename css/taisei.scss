@@ -330,6 +330,7 @@ footer{
 
 //contact-container
 @media (max-width: 1200px){
+  
   .contact-container{
     display: flex;
     flex-direction: column;
@@ -337,8 +338,8 @@ footer{
     align-items: center;
     margin-left: 10%;
     margin-right:10%;
-    
-    // margin-top: 120px;
+    z-index: 0;
+    margin-top: 115px;
     position: absolute;
     top: 10; /* 上端に固定 */
     bottom: 100; /* 下端に固定 */
@@ -346,8 +347,8 @@ footer{
     width:100%;
 
     .contact-title{
-      margin-top: 20%;
-      padding-top:15%;
+      margin-top: 0;
+      padding-top:0;
 
       @media(max-width:1200px){
         padding-top: 20%;

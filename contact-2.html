@@ -20,7 +20,7 @@
         <div class="container subpage">
             <header>
                 <div class="header-group-logo">
-                    <a href="index.html"><img src="header_images/website_logo.svg" alt="" /></a>
+                    <a href="index.html"><img src="images/website_logo.svg" alt="" /></a>
                 </div>
                 <div id="breadcrumb">
                     <p><a href="index.html">HOME</a> ▸ WHAT'S NEW</p>
@@ -28,28 +28,28 @@
                 <div class="header-brands-container">
                     <div class="header-brand" name="zakkushi">
                         <img
-                            src="header_images/logo_zakkushi-1.svg"
+                            src="images/logo_zakkushi-1.svg"
                             alt="Zakkushi logo"
                         />
                     </div>
                     <div class="header-brand" name="raijin">
                         <img
-                            src="header_images/logo_raijin_y_w.svg"
+                            src="images/logo_raijin_y_w.svg"
                             alt="Raijin logo"
                         />
                     </div>
                     <div class="header-brand" name="raizo">
-                        <img src="header_images/logo_raizo-1.svg" alt="Raizo logo" />
+                        <img src="images/logo_raizo-1.svg" alt="Raizo logo" />
                     </div>
                     <div class="header-brand" name="hashigo">
                         <img
-                            src="header_images/logo_hashigo.webp"
+                            src="images/logo_hashigo.webp"
                             alt="Hashigo logo"
                         />
                     </div>
                     <div class="header-brand" name="lab">
                         <img
-                            src="header_images//logo_franklin_food_lab_y_w.svg"
+                            src="images//logo_franklin_food_lab_y_w.svg"
                             alt="Franklin food lab logo"
                         />
                     </div>
@@ -65,88 +65,225 @@
             <div id="breadcrumb-mobile">
                 <p><a href="index.html">HOME</a> ▸ GROUP</p>
             </div>
-            <!-- embed contents here!!!! -->
-                
-    <div class="content press-container">
 
-        <!-- PRESS title -->
-        <div class="press-title">
-          <h1>PRESS</h1>
-        </div>
-  
-  
-        <div class="press-lists">
-  
-          <!-- each press 5 -->
-          <div class="each-press">
+            
+            <!-- embed contents here!!!! -->
+            
+  <div class=" content contact-container">
+    <div class="contact-title">
+      <h1>Contact</h1>
+    </div>
+    <div class="contact-menus">
+
+      <!-- INQUIRY/FEEDBACK -->
+      <div class="contact-menu">
+        <h2 class="toggle-trigger">GENERAL INQUIRY/FEEDBACK<span id="arrow" class="arrow">＞</span></h2>
         
-            <div class="press-image">
-              <img src="press_images/press5.jpg">
-            </div>
-  
-            <div class="press-other">
-              <div class="detail">
-                <p>May 4,2021</p>
-                <p><img src="press_images/ico_loc.svg" height="15px">Vancouver</p>
-                <p><img src="press_images/mediaIcon.svg" height="15px">Vancouver Sun</p>
-              </div>
-              <div class="tag">
-                <p><img src="press_images/ico_tag.svg" height="15px">Franklin Food Lab</p>
-              </div>
-              <div class="press-content">
-                <div class="press-image-medium">
-                  <img src="press_images/press5.jpg">
-                </div>
-                <div class="press-sentence">
-                  <p>Our restaurant was published in VANCOUVER SUN.
-                  </p>
-                </div>
-              </div>
-            </div>
-  
+        <div class="contact-detail">
+          <div class="detail-title">
+            <h3>Your feedback is important to us.</h3>
+            <p>All entries are required.</p>
           </div>
-  
-          <!-- each press 6 -->
-          <div class="each-press">
-            <div class="press-image">
-              <img src="press_images/press6.webp">
+          <div class="btns-container">
+            <label>CONTACT US ABOUT:</label>
+            <div class="btns">
+              <button id="general-inquiry-button" class="color-change-btn">GENERAL INQUIRY</button>
+              <button id="feedback-button">FEEDBACK</button>
             </div>
-  
-            <div class="press-other">
-              <div class="detail">
-                <p>November 9,2020</p>
-                <p><img src="press_images/ico_loc.svg" height="15px">Vancouver</p>
-                <p><img src="press_images/mediaIcon.svg" height="15px">TORJA Toronro + Japanese Magazine</p>
-              </div>
-              <div class="tag">
-                <p><img src="press_images/ico_tag.svg" height="15px">Torizo</p>
-              </div>
-              <div class="press-content">
-                <div class="press-image-medium">
-                  <img src="press_images/press2.webp">
-                </div>
-                <div class="press-sentence">
-                  <p>Our restaurant was published in TORJA Toronto+Japanese Magazine.
-                  </p>
-                </div>
-              </div>
-            </div>
-  
           </div>
-        </div>
-  
-          <!-- page links -->
-        <div class="page-links">
-          <a href="press.html"><</a>
-          <a href="press.html">1</a>
-          <a class="current-link">2</a>
+
+          <div class="contact-forms">
+            <form id="general-inquiry-form">
+              <!-- GENERAL INQUIRY form fields -->
+
+              <!-- each form1 -->
+              <div class="each-form-group">
+                <label for="location">FOR:</label>
+                <select id="location" name="location" class="each-form">
+                  <option value="" selected>Select your location</option>
+                  <option value="Denman">Zakkushi on Denman</option>
+                  <option value="Main">Zakkushi Dining on Main</option>
+                  <option value="Carlton">Zakkushi on Carlton</option>
+                </select>
+              </div>
+
+              <!-- each form1 -->
+              <div class="each-form-group">
+                <label for="about-you">A BIT ABOUT YOU:</label>
+                <input type="text" name="first-name" placeholder="Your first name" id="first-name" class="each-form">
+                <input type="text" name="last-name" placeholder="Your last name" id="last-name" class="each-form">
+                <input type="text" name="email" placeholder="Email address" id="email" class="each-form">
+              </div>
+
+              <!-- each form1 -->
+              <div class="each-form-group">
+                <label for="your-mind">PLEASE SHARE WHAT'S ON YOUR MIND:</label>
+                <textarea placeholder="Enter your comment or question"></textarea>
+              </div>
+
+              <div class="submit">
+                <button type="submit"><img src="contact_images/submitIcon.svg" height="18px">SEND</button>
+              </div>
+            </form>
+
+
+
+            <form id="feedback-form" class="hidden">
+              <!-- FEEDBACK form fields -->
+              <!-- each form1 -->
+              <div class="each-form-group">
+                <label>The details:</label>
+                <select id="order-type" name="order-type" class="each-form">
+                  <option value="" selected>How did you place your order?</option>
+                  <option value="Dine-in">Dine-in</option>
+                  <option value="Take out">Take out</option>
+                  <option value="Delivery">Delivery</option>
+                </select>
+
+                <select id="location" name="location" class="each-form">
+                  <option value=""  selected>Select your location</option>
+                  <option value="Denman">Zakkushi on Denman</option>
+                  <option value="Main">Zakkushi Dining on Main</option>
+                  <option value="Carlton">Zakkushi on Carlton</option>
+                </select>
+
+                <input type="date" name="date" class="each-form">
+
+                <select id="visist-time" name="visit-time" class="each-form">
+                  <option value="" selected>Time of your visit or order</option>
+                  <option value="Lunch">Lunch</option>
+                  <option value="Dinner">Dinner</option>
+                </select>
+              </div>
+
+              <!-- each form1 -->
+              <div class="each-form-group">
+                <label for="about-you">A BIT ABOUT YOU:</label>
+                <input type="text" name="first-name" placeholder="Your first name" id="first-name" class="each-form">
+                <input type="text" name="last-name" placeholder="Your last name" id="last-name" class="each-form">
+                <input type="text" name="email" placeholder="Email address" id="email" class="each-form">
+              </div>
+
+              <!-- each form1 -->
+              <div class="each-form-group">
+                <label for="your-mind">PLEASE SHARE WHAT'S ON YOUR MIND:</label>
+                <textarea placeholder="Enter your comment or question"></textarea>
+              </div>
+              <div class="submit">
+                <button type="submit"><img src="contact_images/submitIcon.svg">SEND</button>
+              </div>
+            </form>
+          </div>
+          
         </div>
       </div>
-  
-  
-      
-  
-      <footer>
+
+
+      <!-- MAKE A RESERVATION -->
+      <div class="contact-menu">
+        <h2 class="toggle-trigger">MAKE A RESERVATION<span id="arrow" class="arrow">＞</span></h2>
+        <div class="contact-detail">
+          
+          <div class="reservation-title">
+            <h4 class="reservation-title"><img src="contact_images/logo_zakkushi.svg">ZAKKUSHI</h4>
+          </div>
+          <div class="reservation-list">
+            <div class="each-reservation">
+              <div class="reservation-location">
+                <h4><img src="contact_images/smallArrowIcon.svg">Denman</h4>
+                <span class="small-font">823 Denman St, Vancouver</span>
+              </div>
+              <div class="reservation-other">
+                <p><img src="contact_images/pcIcon.svg">Online <img src="contact_images/arrowIcon.svg"></p>
+                <p><img src="contact_images/phoneIcon.svg">604-685-1136</p>
+              </div>
+            </div>
+
+            <div class="each-reservation">
+              <div class="reservation-location">
+                <h4><img src="contact_images/smallArrowIcon.svg">Main</h4>
+                <span class="small-font">4075 Main St, Vancouver</span>
+              </div>
+              <div class="reservation-other">
+                <p><img src="contact_images/pcIcon.svg">Online <img src="contact_images/arrowIcon.svg"></p>
+                <p><img src="contact_images/phoneIcon.svg">604-874-9455</p>
+              </div>
+            </div>
+
+            <div class="each-reservation">
+              <div class="reservation-location">
+                <h4><img src="contact_images/smallArrowIcon.svg">Carlton</h4>
+                <span class="small-font">193 Carlton St, Vancouver</span>
+              </div>
+              <div class="reservation-other">
+                <p><img src="contact_images/pcIcon.svg">Online <img src="contact_images/arrowIcon.svg"></p>
+                <p><img src="contact_images/phoneIcon.svg">647-352-9455</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+
+      <!-- CAREER -->
+      <div class="contact-menu">
+        <h2 class="toggle-trigger">CAREER OPPORTUNITIES<span id="arrow" class="arrow">＞</span></h2>
+        <div class="contact-detail hidden">
+          <div class="detail-title">
+            <h3>We are looking forward to your application!</h3>
+            <p>All entries are required.</p>
+          </div>
+
+          <div class="contact-forms">
+            <form id="apply-form">
+              <!-- APPLy form fields -->
+              <!-- each-form-group 1 -->
+              <div class="each-form-group">
+                <label for="location">APPLY TO:</label>
+                <select id="location" name="location" class="each-form">
+                  <option value="" selected>Preferres location*</option>
+                  <option value="Denman">Zakkushi on Denman</option>
+                  <option value="Main">Zakkushi Dining on Main</option>
+                  <option value="Carlton">Zakkushi on Carlton</option>
+                </select>
+                <input type="text" name="position" class="position" placeholder="Preferred position">
+                <span class="small-font">e.g. Kitchen, Server</span>
+              </div>
+
+              <!-- each-form-group 1 -->
+              <div class="each-form-group">
+                <label for="about-you">YOUR INFORMATION:</label>
+                <input type="text" name="first-name" placeholder="Your first name" id="first-name" class="each-form">
+                <input type="text" name="last-name" placeholder="Your last name" id="last-name" class="each-form">
+                <input type="text" name="email" placeholder="Email address" id="email" class="each-form">
+              </div>
+
+              <!-- each-form-group 1 -->
+              <div class="each-form-group">
+                <label for="upload-file">UPLOAD YOUR RESUME:</label>
+                <div class="each-form-file">
+                  <input type="file" name="file" placeholder="Upload" id="first-name">
+                </div>
+                <span class="small-font">Accepted file types: pdf, docx, Max. file size: 3 MB, Max. files: 5.</span>
+              </div>
+
+              <!-- each-form-group 1 -->
+              <div class="each-form-group">
+                <label for="your-mind">TELL US WHAT MOTIVATED YOU TO APPLY TO OUR COMPANY?</label>
+                <textarea placeholder="Also, If you have any questions such as details, please feel free to comment here."></textarea>
+              </div>
+              <div class="submit">
+                <button type="submit"><img src="contact_images/submitIcon.svg">SEND</button>
+              </div>
+            </form>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+
+    <footer>
         <div class="footer-links">
           <a href="group.html" class="footer-link">GROUP</a>
           <a href="contact.html" class="footer-link">CONTACT US</a>
@@ -156,10 +293,9 @@
           <p>Copyright © ZAKKUSHI.com. All Rights Reserved.</p>
         </div>
       </footer>
+  </div>
 
-
-
-
+  
             
             <!-- embed contents here!!!! -->
             <nav>
@@ -195,7 +331,7 @@
                         <div id="menu-side">
                             <div>
                                 <div class="header-group-logo">
-                                    <img src="header_images/website_logo.svg" alt="">
+                                    <img src="images/website_logo.svg" alt="">
                                 </div>
                                 <div class="blank"></div>
                                 <div class="header-lang">
@@ -270,7 +406,7 @@
                                 </div>
                             </div>
                             <div id="menu-cornerimage">
-                                <img src="header_images/icon_back_pc.svg" alt="">
+                                <img src="images/icon_back_pc.svg" alt="">
                             </div>
                         </div>
                     </div>
@@ -334,7 +470,7 @@
                         </div>
                     </div>
                     <div id="menu-cornerimage">
-                        <img src="header_images/icon_back_pc.svg" alt="">
+                        <img src="images/icon_back_pc.svg" alt="">
                     </div>
                 </div>
             </nav>

@@ -1,4 +1,4 @@
-let brand = document.querySelectorAll(".nav-brand");
+let brand = document.querySelectorAll(".header-brand");
 let defaultBrand = document.getElementsByClassName("default")[0];
 let imgset = [
     {
@@ -34,12 +34,48 @@ let menuHamburger = document.getElementById("menu-hamburger");
 let menuText = menuHamburger.getElementsByTagName("p")[0];
 let ourMenu = document.getElementById("our-menu");
 let ourMenuContainer = document.getElementById("our-menu-container");
+let brandMobile = document.getElementsByClassName("header-brand-mobile");
+let brandNamesMobile = document.getElementsByClassName("brand-name-container-mobile");
+let mainMenuMobile = document.getElementById("menu-main-mobile");
+let pageName = document.getElementsByTagName("body");
+pageName = pageName[0].getAttribute("name");
+// let screenWidth = screen.width;
+
+
+
+// rotate brand every 8 seconds
+// *from here* I wrote this part using chatGPT!!!
+if(pageName === "home") {
+let activeIndex = 0;
+function setActiveBrand(index) {
+    for (let i = 0; i < brand.length; i++) {
+        brand[i].classList.remove("active");
+        brandMobile[i].classList.remove("active");
+        brandNamesMobile[i].classList.remove("active");
+    }
+    brand[index].classList.add("active");
+    brandMobile[index].classList.add("active");
+    brandNamesMobile[index].classList.add("active");
+    brandImage.style.backgroundImage = `url(${imgset[index].img})`;
+    brandImageSm.style.backgroundImage = `url(${imgset[index].imgsm})`;
+}
+
+function rotateActiveBrand() {
+    setActiveBrand(activeIndex);
+    activeIndex = (activeIndex + 1) % brand.length;
+}
+
+setInterval(rotateActiveBrand, 8000);
+}
+// *to here* I wrote this part using chatGPT!!!
+
 
 
 // open menu window when hamburger clicked
 menuHamburger.addEventListener("click", () => {
     menuContainer.classList.toggle("open");
     menuHamburger.classList.toggle("open");
+    mainMenuMobile.classList.toggle("open");
 
     if(menuText.innerText === "MENU") {
         menuText.innerText = "CLOSE";
@@ -54,3 +90,66 @@ ourMenu.addEventListener("click", () => {
     ourMenuContainer.classList.toggle("chosen")
 })
 
+
+// brand logo hover
+for (let i = 0; i < brand.length; i++) {
+    let brandName = brand[i].getAttribute("name");
+    brand[i].addEventListener("mouseenter", () => {
+        
+        // remove "active" if other elemets have it
+        for (let j = 0; j < brand.length; j++) {
+            if (brand[i] !== brand[j]) {
+                brand[j].classList.remove("active");
+            }
+        }
+
+        // add "active" to hovered element
+        brand[i].classList.add("active");
+
+        // set image
+        for (let j = 0; j < imgset.length; j++) {
+            if (brandName === imgset[j].name) {
+                brandImage.style.backgroundImage = `url(${imgset[j].img})`;
+                brandImageSm.style.backgroundImage = `url(${imgset[j].imgsm})`;
+            }
+        }
+    });
+}
+
+// mobile brand logo tap
+// only works if the page name is "home"
+if(pageName === "home") {
+    for (let i = 0; i < brand.length; i++) {
+        let brandName = brandMobile[i].getAttribute("name");
+
+        brandMobile[i].addEventListener("click", () => {
+            
+            // remove "active" if other elemets have it
+            for (let j = 0; j < brandMobile.length; j++) {
+                if (brandMobile[i] !== brandMobile[j]) {
+                    brandMobile[j].classList.remove("active");
+                    brandNamesMobile[j].classList.remove("active");
+                }
+            }
+
+            // add "active" to hovered element
+            brandMobile[i].classList.add("active");
+            brandNamesMobile[i].classList.add("active");
+
+            // set image
+            for (let j = 0; j < imgset.length; j++) {
+                if (brandName === imgset[j].name) {
+                    brandImage.style.backgroundImage = `url(${imgset[j].img})`;
+                    brandImageSm.style.backgroundImage = `url(${imgset[j].imgsm})`;
+                }
+            }
+        });
+    }
+}
+
+// remove "active" class when mouse leaves
+for (let i = 0; i < brand.length; i++) {
+    brand[i].addEventListener("mouseleave", () => {
+        brand[i].classList.remove("active");
+    });
+}

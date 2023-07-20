@@ -1,7 +1,7 @@
-@import "base-style";
-@import "home-style";
+// @import "base-style";
+// @import "home-style";
 
-.container.page-group {
+.container.subpage {
     header {
         grid-template-rows: auto auto 1fr auto;
 
@@ -183,3 +183,7 @@
         }
     }
 }
+
+
+// @import "home-media-style";
+// @import "media-style";

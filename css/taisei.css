@@ -154,6 +154,11 @@ footer a {
   height: 100%; /* コンテンツが画面の高さいっぱいになるように設定 */
   overflow-y: auto; /* コンテンツがはみ出た場合はスクロールバーを表示 */
 }
+@media (max-width: 1200px) {
+  .press-container {
+    width: 85%;
+  }
+}
 .press-container .press-title {
   display: flex;
   flex-direction: column;
@@ -247,8 +252,8 @@ footer a {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-left: 0;
-    margin-right: 0;
+    margin-left: 10%;
+    margin-right: 10%;
     position: absolute;
     top: 10; /* 上端に固定 */
     bottom: 100; /* 下端に固定 */
@@ -257,7 +262,30 @@ footer a {
   }
   .contact-container .contact-title {
     margin-top: 20%;
+    padding-top: 15%;
   }
+}
+@media (max-width: 1200px) and (max-width: 1200px) {
+  .contact-container .contact-title {
+    padding-top: 20%;
+  }
+}
+@media (max-width: 1200px) and (max-width: 950px) {
+  .contact-container .contact-title {
+    padding-top: 40%;
+  }
+}
+@media (max-width: 1200px) and (max-width: 700px) {
+  .contact-container .contact-title {
+    padding-top: 80%;
+  }
+}
+@media (max-width: 1200px) and (max-width: 400px) {
+  .contact-container .contact-title {
+    padding-top: 120%;
+  }
+}
+@media (max-width: 1200px) {
   .contact-container .contact-menus {
     width: 80%;
     margin-right: 0;
@@ -268,6 +296,8 @@ footer a {
     padding-top: 0;
     margin-top: 0;
   }
+}
+@media (max-width: 1200px) {
   .contact-container h2 {
     font-size: 15px;
   }
@@ -292,6 +322,11 @@ footer a {
   bottom: 180; /* 下端に固定 */
   left: 180; /* 左端に固定 */
   right: 0; /* 右端に固定 */
+}
+@media (max-width: 1200px) {
+  .contact-container {
+    width: 100%;
+  }
 }
 .contact-container .contact-menus {
   width: 80%;
@@ -499,6 +534,26 @@ footer a {
 
 .career {
   padding: 3% 3% 100px 3%;
+}
+@media (max-width: 1200px) {
+  .career {
+    padding: 3% 3% 30% 3%;
+  }
+}
+@media (max-width: 950px) {
+  .career {
+    padding: 3% 3% 45% 3%;
+  }
+}
+@media (max-width: 700px) {
+  .career {
+    padding: 3% 3% 80% 3%;
+  }
+}
+@media (max-width: 400px) {
+  .career {
+    padding: 3% 3% 120% 3%;
+  }
 }
 
 .contact-detail.show {

@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/taisei.css">
+  <title>CONTACT -ZAKKUSHI GROUP</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+  <div class="header"><!--Kanayo part header 左180px 上115px-->header</div>
+  <div class="nav-menu"><!--Kanayo part nav 下90px-->nav-menu</div>
+
+  <!-- content -->
+  <div class=" content contact-container">
+    <div class="contact-title">
+      <h1>Contact</h1>
+    </div>
+    <div class="contact-menus">
+
+      <!-- INQUIRY/FEEDBACK -->
+      <div class="contact-menu">
+        <h2 class="toggle-trigger">GENERAL INQUIRY/FEEDBACK<span id="arrow" class="arrow">＞</span></h2>
+        
+        <div class="contact-detail">
+          <div class="detail-title">
+            <h3>Your feedback is important to us.</h3>
+            <p>All entries are required.</p>
+          </div>
+          <div class="btns-container">
+            <label>CONTACT US ABOUT:</label>
+            <div class="btns">
+              <button id="general-inquiry-button" class="color-change-btn">GENERAL INQUIRY</button>
+              <button id="feedback-button">FEEDBACK</button>
+            </div>
+          </div>
+
+          <div class="contact-forms">
+            <form id="general-inquiry-form">
+              <!-- GENERAL INQUIRY form fields -->
+
+              <!-- each form1 -->
+              <div class="each-form-group">
+                <label for="location">FOR:</label>
+                <select id="location" name="location" class="each-form">
+                  <option value="" selected>Select your location</option>
+                  <option value="Denman">Zakkushi on Denman</option>
+                  <option value="Main">Zakkushi Dining on Main</option>
+                  <option value="Carlton">Zakkushi on Carlton</option>
+                </select>
+              </div>
+
+              <!-- each form1 -->
+              <div class="each-form-group">
+                <label for="about-you">A BIT ABOUT YOU:</label>
+                <input type="text" name="first-name" placeholder="Your first name" id="first-name" class="each-form">
+                <input type="text" name="last-name" placeholder="Your last name" id="last-name" class="each-form">
+                <input type="text" name="email" placeholder="Email address" id="email" class="each-form">
+              </div>
+
+              <!-- each form1 -->
+              <div class="each-form-group">
+                <label for="your-mind">PLEASE SHARE WHAT'S ON YOUR MIND:</label>
+                <textarea placeholder="Enter your comment or question"></textarea>
+              </div>
+
+              <div class="submit">
+                <button type="submit"><img src="contact_images/submitIcon.svg" height="18px">SEND</button>
+              </div>
+            </form>
+
+
+
+            <form id="feedback-form" class="hidden">
+              <!-- FEEDBACK form fields -->
+              <!-- each form1 -->
+              <div class="each-form-group">
+                <label>The details:</label>
+                <select id="order-type" name="order-type" class="each-form">
+                  <option value="" selected>How did you place your order?</option>
+                  <option value="Dine-in">Dine-in</option>
+                  <option value="Take out">Take out</option>
+                  <option value="Delivery">Delivery</option>
+                </select>
+
+                <select id="location" name="location" class="each-form">
+                  <option value=""  selected>Select your location</option>
+                  <option value="Denman">Zakkushi on Denman</option>
+                  <option value="Main">Zakkushi Dining on Main</option>
+                  <option value="Carlton">Zakkushi on Carlton</option>
+                </select>
+
+                <input type="date" name="date" class="each-form">
+
+                <select id="visist-time" name="visit-time" class="each-form">
+                  <option value="" selected>Time of your visit or order</option>
+                  <option value="Lunch">Lunch</option>
+                  <option value="Dinner">Dinner</option>
+                </select>
+              </div>
+
+              <!-- each form1 -->
+              <div class="each-form-group">
+                <label for="about-you">A BIT ABOUT YOU:</label>
+                <input type="text" name="first-name" placeholder="Your first name" id="first-name" class="each-form">
+                <input type="text" name="last-name" placeholder="Your last name" id="last-name" class="each-form">
+                <input type="text" name="email" placeholder="Email address" id="email" class="each-form">
+              </div>
+
+              <!-- each form1 -->
+              <div class="each-form-group">
+                <label for="your-mind">PLEASE SHARE WHAT'S ON YOUR MIND:</label>
+                <textarea placeholder="Enter your comment or question"></textarea>
+              </div>
+              <div class="submit">
+                <button type="submit"><img src="contact_images/submitIcon.svg">SEND</button>
+              </div>
+            </form>
+          </div>
+          
+        </div>
+      </div>
+
+
+      <!-- MAKE A RESERVATION -->
+      <div class="contact-menu">
+        <h2 class="toggle-trigger">MAKE A RESERVATION<span id="arrow" class="arrow">＞</span></h2>
+        <div class="contact-detail hidden">
+          
+          <div class="reservation-title">
+            <h4 class="reservation-title"><img src="contact_images/logo_zakkushi.svg" height="20px">ZAKKUSHI</h4>
+          </div>
+          <div class="reservation-list">
+            <div class="each-reservation">
+              <div class="reservation-location">
+                <h4><img src="contact_images/smallArrowIcon.svg" height="10px">Denman</h4>
+                <span class="small-font">823 Denman St, Vancouver</span>
+              </div>
+              <div class="reservation-other">
+                <p><img src="contact_images/pcIcon.svg" height="10px">Online <img src="contact_images/arrowIcon.svg" height="10px"></p>
+                <p><img src="contact_images/phoneIcon.svg" height="10px">604-685-1136</p>
+              </div>
+            </div>
+
+            <div class="each-reservation">
+              <div class="reservation-location">
+                <h4><img src="contact_images/smallArrowIcon.svg" height="10px">Main</h4>
+                <span class="small-font">4075 Main St, Vancouver</span>
+              </div>
+              <div class="reservation-other">
+                <p><img src="contact_images/pcIcon.svg" height="10px">Online <img src="contact_images/arrowIcon.svg" height="10px"></p>
+                <p><img src="contact_images/phoneIcon.svg" height="10px">604-874-9455</p>
+              </div>
+            </div>
+
+            <div class="each-reservation">
+              <div class="reservation-location">
+                <h4><img src="contact_images/smallArrowIcon.svg" height="10px">Carlton</h4>
+                <span class="small-font">193 Carlton St, Vancouver</span>
+              </div>
+              <div class="reservation-other">
+                <p><img src="contact_images/pcIcon.svg" height="10px">Online <img src="contact_images/arrowIcon.svg" height="10px"></p>
+                <p><img src="contact_images/phoneIcon.svg" height="10px">647-352-9455</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+
+      <!-- CAREER -->
+      <div class="contact-menu">
+        <h2 class="toggle-trigger">CAREER OPPORTUNITIES<span id="arrow" class="arrow">＞</span></h2>
+        <div class="contact-detail career">
+          <div class="detail-title">
+            <h3>We are looking forward to your application!</h3>
+            <p>All entries are required.</p>
+          </div>
+
+          <div class="contact-forms">
+            <form id="apply-form">
+              <!-- APPLy form fields -->
+              <!-- each-form-group 1 -->
+              <div class="each-form-group">
+                <label for="location">APPLY TO:</label>
+                <select id="location" name="location" class="each-form">
+                  <option value="" selected>Preferres location*</option>
+                  <option value="Denman">Zakkushi on Denman</option>
+                  <option value="Main">Zakkushi Dining on Main</option>
+                  <option value="Carlton">Zakkushi on Carlton</option>
+                </select>
+                <input type="text" name="position" class="position" placeholder="Preferred position">
+                <span class="small-font">e.g. Kitchen, Server</span>
+              </div>
+
+              <!-- each-form-group 1 -->
+              <div class="each-form-group">
+                <label for="about-you">YOUR INFORMATION:</label>
+                <input type="text" name="first-name" placeholder="Your first name" id="first-name" class="each-form">
+                <input type="text" name="last-name" placeholder="Your last name" id="last-name" class="each-form">
+                <input type="text" name="email" placeholder="Email address" id="email" class="each-form">
+              </div>
+
+              <!-- each-form-group 1 -->
+              <div class="each-form-group">
+                <label for="upload-file">UPLOAD YOUR RESUME:</label>
+                <div class="each-form-file">
+                  <input type="file" name="file" placeholder="Upload" id="first-name">
+                </div>
+                <span class="small-font">Accepted file types: pdf, docx, Max. file size: 3 MB, Max. files: 5.</span>
+              </div>
+
+              <!-- each-form-group 1 -->
+              <div class="each-form-group">
+                <label for="your-mind">TELL US WHAT MOTIVATED YOU TO APPLY TO OUR COMPANY?</label>
+                <textarea placeholder="Also, If you have any questions such as details, please feel free to comment here."></textarea>
+              </div>
+              <div class="submit">
+                <button type="submit"><img src="contact_images/submitIcon.svg" height="15px">SEND</button>
+              </div>
+            </form>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+
+    
+  </div>
+  <footer>
+    <div class="footer-links">
+      <a href="group.html" class="footer-link">GROUP</a>
+      <a href="contact.html" class="footer-link">CONTACT US</a>
+      <a href="press.html" class="footer-link">PRESS</a>
+    </div>
+    <div class="copyright">
+      <p>Copyright © ZAKKUSHI.com. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  
+
+  <script src="js/taisei.js"></script>
+</body>
+</html>

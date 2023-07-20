@@ -37,7 +37,7 @@ header {
   z-index: 999;
 }
 
-.nav-group-logo {
+.header-group-logo {
   width: 95%;
   margin: 0 auto 2rem;
   transform: translateX(10px);
@@ -45,14 +45,14 @@ header {
   padding: 1rem;
   padding-bottom: 0;
 }
-.nav-brands-container {
+.header-brands-container {
   width: 80%;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
   gap: 2rem;
 }
-.nav-brand {
+.header-brand {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -60,11 +60,11 @@ header {
   transition: all 1s;
   cursor: pointer;
 }
-.nav-brand img {
+.header-brand img {
   width: 50px;
   cursor: pointer;
 }
-.nav-brand .brand-name-container {
+.header-brand .brand-name-container {
   color: #fff;
   font-family: "Noto Sans JP", sans-serif;
   position: absolute;
@@ -75,7 +75,7 @@ header {
   pointer-events: none;
   transition: all 1s;
 }
-.nav-brand .brand-name-container::before, .nav-brand .brand-name-container::after {
+.header-brand .brand-name-container::before, .header-brand .brand-name-container::after {
   content: "";
   position: absolute;
   bottom: 0;
@@ -83,48 +83,48 @@ header {
   height: 1px;
   background: rgba(255, 255, 255, 0.75);
 }
-.nav-brand .brand-name-container::before {
+.header-brand .brand-name-container::before {
   transform: translate(-90px, 5px) scaleX(0);
   transform-origin: left;
 }
-.nav-brand .brand-name-container::after {
+.header-brand .brand-name-container::after {
   right: 0;
   transform: translate(20px, 14px);
   transform-origin: right;
 }
-.nav-brand .brand-name-container .brand-category {
+.header-brand .brand-name-container .brand-category {
   font-size: 0.7rem;
   margin: 0;
 }
-.nav-brand .brand-name-container .brand-name {
+.header-brand .brand-name-container .brand-name {
   font-size: 1.2rem;
   margin: 0;
   margin-top: 0.5rem;
 }
-.nav-brand .brand-name-container .text-icon {
+.header-brand .brand-name-container .text-icon {
   position: absolute;
   width: 10px;
   right: 0;
   transform: translate(20px, -6px);
 }
-.nav-brand.active {
+.header-brand.active {
   transform: translateX(40px);
 }
-.nav-brand.active .brand-name-container {
+.header-brand.active .brand-name-container {
   opacity: 1;
   pointer-events: unset;
 }
-.nav-brand.active .brand-name-container::before {
+.header-brand.active .brand-name-container::before {
   animation: beforeBorder 2s ease-in-out forwards;
 }
-.nav-brand.active .brand-name-container::after {
+.header-brand.active .brand-name-container::after {
   animation: afterBorder 2s ease-in-out forwards;
 }
-.nav-lang {
+.header-lang {
   padding: 1rem;
   padding-top: 0;
 }
-.nav-lang ul {
+.header-lang ul {
   list-style: none;
   display: flex;
   padding: 0.8rem;
@@ -134,12 +134,19 @@ header {
   justify-content: space-around;
   align-items: center;
 }
-.nav-lang ul li {
+.header-lang ul li {
   font-size: 0.7rem;
   padding: 1px 4px;
 }
-.nav-lang ul li.active {
+.header-lang ul li.active {
   border: 1px solid #fff;
+}
+
+nav {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
 }
 
 #menu {

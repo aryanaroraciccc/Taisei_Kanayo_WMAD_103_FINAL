@@ -39,8 +39,9 @@ let brandNamesMobile = document.getElementsByClassName("brand-name-container-mob
 let mainMenuMobile = document.getElementById("menu-main-mobile");
 let pageName = document.getElementsByTagName("body");
 pageName = pageName[0].getAttribute("name");
-// let screenWidth = screen.width;
-
+let langLink = document.getElementsByClassName("lang-tba");
+let langPopup = document.getElementById("lang-popup");
+let langCloseBtn = document.getElementById("closebtn");
 
 
 // rotate brand every 8 seconds
@@ -153,3 +154,16 @@ for (let i = 0; i < brand.length; i++) {
         brand[i].classList.remove("active");
     });
 }
+
+
+// langage popup 
+for (let i = 0; i < langLink.length; i++) {
+    langLink[i].addEventListener("click", ()=> {
+        langPopup.classList.add("popup");
+    })
+}
+
+// langage close btn
+langCloseBtn.addEventListener("click", ()=> {
+    langPopup.classList.remove("popup");
+})

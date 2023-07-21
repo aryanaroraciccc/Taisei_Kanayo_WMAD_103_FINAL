@@ -138,6 +138,7 @@ header {
             li {
                 font-size: .7rem;
                 padding: 1px 4px;
+                cursor: pointer;
                 &.active {
                     border: 1px solid #fff;
                 }
@@ -458,3 +459,68 @@ main {
     }
 }
 
+#lang-popup {
+    position: absolute;
+    inset: 50% auto auto 50%;
+    transform: translate(-50%, -50%) scale(0);
+    width: 50%;
+    max-width: 500px;
+    min-width: 300px;
+    padding: 1rem;
+    // aspect-ratio: 4/3;
+    border-radius: 15px;
+    background: rgba(0,0,0,.5);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    font-family: $sans-text;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    // opacity: 0;
+    transition: all .5s;
+
+
+    &-tba {
+        color: #fff;
+        font-size: 3rem;
+        text-align: center;
+        P {
+            margin: 1rem 0;
+        }
+    }
+
+    #closebtn {
+        p {
+            width: fit-content;
+            padding: .5rem 1.2rem;
+            background: rgba(255,255,255,.7);
+            color: #000;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all .5s;
+
+            &:hover {
+                background: rgba(0,0,0,.5);
+                color: #fff;
+            }
+        }
+    }
+
+    &::before {
+        content: "";
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        inset: 0 auto auto 0;
+        // background: transparent;
+        backdrop-filter: blur(5px);
+        z-index: -1;
+        border-radius: inherit;
+        transition: inherit;
+    }
+
+    &.popup {
+        // opacity: 1;
+        transform: translate(-50%, -50%) scale(1);
+    }
+}
